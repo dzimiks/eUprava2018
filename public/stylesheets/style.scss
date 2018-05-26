@@ -61,6 +61,23 @@ formItem input:not([type='checkbox']) {
   min-height: 30px;
 }
 
+*[role="form"] {
+  max-width: 530px;
+  padding: 15px;
+  margin: 0 auto;
+  background-color: #fff;
+  border-radius: 0.3em;
+}
+
+*[role="form"] h2 {
+  margin-left: 5em;
+  margin-bottom: 1em;
+}
+
+input[type=checkbox], input[type=radio] {
+  margin: 10px 0 0 !important;
+}
+
 .fa-envelope {
   font-size: 2.2rem !important;
 }
@@ -88,4 +105,9 @@ formItem input:not([type='checkbox']) {
   top: 5px;
   left: 23px;
   padding: 3px 5px !important;
+}
+
+.login-wrapper {
+  margin: 0 auto;
+  width: 60%;
 }
