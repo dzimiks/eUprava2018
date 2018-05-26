@@ -11,7 +11,6 @@
 #zanimanje_paragraf{
   font-weight: bold;
 
-
 }
 
 .picture_box{
@@ -38,7 +37,6 @@
 }
 
 #notification_panel {
-  float: right !important;
   width: 80%;
 }
 
@@ -50,11 +48,16 @@
   margin: 10px 0;
 }
 
+.btn-margin{
+  margin: 5px;
+
+}
+
 .notification-buttons {
   float: right;
 
   button {
-    width: 60px;
+    width: 80px;
   }
 }
 

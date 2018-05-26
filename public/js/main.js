@@ -17,68 +17,65 @@ $(document).ready(function () {
   });
 });
 
-function Notification(type, title, date, msg){
-    this.type = type;
+function NotificationFinal(title, msg){
+
     this.title = title;
-    this.date = date;
     this.msg = msg;
+    this.activeNotification =  true;
+
 
     let mainDiv = document.createElement("div");
-    mainDiv.className = "card notification_card card-1";
-    mainDiv.height = 100;
+    mainDiv.className = "card card-1";
 
-    let titleDiv = document.createElement("div");
-    titleDiv.className = "card-title";
-    titleDiv.innerHTML = this.title;
-
-
-    let bodyDiv = document.createElement("div");
-    bodyDiv.className = "card-content";
-
-    let button = document.createElement("button");
-
-    let span = document.createElement("span");
-
-    button.innerHTML = span.innerHTML = "&times";
-    button.type = "button";
-    button.onclick = function(){
+    let closeButton = document.createElement("span");
+    closeButton.innerHTML = "&times";
+    closeButton.className = "notificaiton_button close";
+    closeButton.onclick = function(){
         mainDiv.style.display = 'none';
-    };
+    }
 
-    button.className = "notificaiton_button close";
+    let h3Title = document.createElement("h3");
+    h3Title.innerHTML = title;
 
+    let text =  document.createElement("p");
+    text.innerHTML = msg;
+
+    //Dva dugmeta
     let buttonDiv = document.createElement("div");
-    buttonDiv.className = "notification-buttons";
+    buttonDiv.className= "notification-buttons";
 
-    let acceptButton = document.createElement("button");
-    acceptButton.type = "Button";
-    acceptButton.className = "btn btn btn-success";
-    acceptButton.innerHTML = "Nastavi";
+    let buttonPostpone = document.createElement("button");
+    buttonPostpone.className = "btn btn-primary btn-margin";
+    buttonPostpone.type = "Button";
+    buttonPostpone.innerHTML = "Odlozi";
 
-    let postponeButton = document.createElement("button");
-    postponeButton.type = "Button";
-    postponeButton.className = "btn btn-primary";
-    postponeButton.innerHTML = "Odlozi"; //TODO
+    let buttonAccept = document.createElement("button");
+    buttonAccept.className = "btn btn-success btn-margin";
+    buttonAccept.type = "Button";
+    buttonAccept.innerHTML = "Prihvati";
 
 
-    buttonDiv.appendChild(acceptButton);
-    buttonDiv.appendChild(postponeButton);
+    buttonDiv.appendChild(buttonAccept);
+    buttonDiv.appendChild(buttonPostpone);
 
-    let text = document.createElement("p");
-    // text.className = "notification_text";
-    text.innerHTML = this.msg;
 
-    bodyDiv.appendChild(text);
-    bodyDiv.appendChild(button);
-    bodyDiv.appendChild(buttonDiv);
-    mainDiv.appendChild(titleDiv);
+    //Main Div
+    mainDiv.appendChild(closeButton);
+    mainDiv.appendChild(h3Title);
+    mainDiv.appendChild(text);
+    mainDiv.appendChild(buttonDiv);
 
-    mainDiv.appendChild(bodyDiv);
-
+    //Dodaje notifikaciju
     document.getElementById("notification_panel_scroll").appendChild(mainDiv);
 
+
+    isActive = function(){return this.activeNotification};
+
+    setActive = function(active) {this.activeNotification = active};
 }
 
-var n1 = Notification("WARNING", "NASLOV", new Date(1997, 11, 16), "Ovo je poruka za notifikaciju");
-var n2 = Notification("HELlo", "Pozega", new Date(), "Malo teksta za mlade ljude koji stare trosenjem mladig dana u mlade sate");
-var n3 = Notification("HELlo", "Pozega", new Date(), "Malo teksta za mlade ljude koji stare trosenjem mladig dana u mlade sate");
+var not1 = new NotificationFinal("ALOOOO", "Idemo nissss idemo nissss idemo idemo idemo idemo");
+var not2 = new NotificationFinal("Naslov", "Neka tamo poruka koja sluzi za obavestvannje biloc ega");
+var not3 = new NotificationFinal("AAAAA", "BBBBBBBBBBBBBBBBBBB");
+
+
