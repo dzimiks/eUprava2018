@@ -14,6 +14,10 @@ body {
   background-color: white;
 }
 
+.navbar-form {
+  max-width: 300px !important;
+}
+
 .navbar-nav .nav-link {
   color: #1A4073 !important;
   font-size: 16px !important;
@@ -30,6 +34,14 @@ body {
 
 .navbar-nav .nav-item:hover {
   background-color: #f7f1f1;
+}
+
+.navbar-brand {
+  padding: 0px !important;
+}
+
+.input-group-addon {
+  background-color: white !important;
 }
 
 formItem input:not([type='checkbox']) {
@@ -49,7 +61,7 @@ formItem input:not([type='checkbox']) {
 }
 
 .fa-envelope {
-  font-size: 1.5rem !important;
+  font-size: 1.8rem !important;
 }
 
 .btn-outline-primary {
