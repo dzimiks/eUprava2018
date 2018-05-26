@@ -27,6 +27,7 @@
   font-size: x-large;
   margin-top: 20px;
   margin-left: 15px;
+  margin-bottom: 30px;
 }
 
 
@@ -34,64 +35,44 @@
   position: absolute;
   top: 5px;
   right: 5px;
-
 }
 
-.notificaiton_button_panel > button{
-  margin-left: 8px;
-  margin-right: 8px;
-  margin-bottom: 1px;
-}
-
-.notification_text{
-  position: absolute;
-  top: 25px;
-  left: 10px;
-  width: 65%;
-  margin-top: 15px;
-  margin-bottom: 5px;
-  text-align: left;
-}
-
-.notification_title{
-  font-weight: bold;
-  font-size: larger;
-  position: absolute;
-  top: 10px;
-  left: 10px;
-
-}
-
-.notificaiton_button_panel{
-  position: absolute;
-  bottom: 15px;
-  right: 15px;
-}
-
-
-#notification_panel{
+#notification_panel {
   float: right !important;
+  width: 80%;
 }
 
-#notification_panel_scroll{
-  overflow: auto;
-  height: 45vh;
-  overflow-x: hidden;
-  overflow-y: visible;
+#notification_panel_scroll {
+  overflow: hidden;
 }
 
 .notification_card{
-  height: 100px !important;
-  width: 57.8vh !important;
+  margin: 10px 0;
 }
+
+.notification-buttons {
+  float: right;
+
+  button {
+    width: 60px;
+  }
+}
+
 .card {
+  //background: #fff;
+  //border-radius: 2px;
+  //display: inline-block;
+  ////height: 48.5vh;
+  //margin: 1rem;
+  //position: relative;
+  //width: 100%;
+
   background: #fff;
   border-radius: 2px;
   display: inline-block;
-  height: 48.5vh;
-  margin: 1rem;
+  padding: 20px;
   position: relative;
-  width: 60vh;
+  width: 100%;
 }
 
 .card-1 {

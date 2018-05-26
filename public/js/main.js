@@ -28,12 +28,12 @@ function Notification(type, title, date, msg){
     mainDiv.height = 100;
 
     let titleDiv = document.createElement("div");
-    titleDiv.className = "card-title notification_title";
+    titleDiv.className = "card-title";
     titleDiv.innerHTML = this.title;
 
 
     let bodyDiv = document.createElement("div");
-    bodyDiv.className = "";
+    bodyDiv.className = "card-content";
 
     let button = document.createElement("button");
 
@@ -43,37 +43,34 @@ function Notification(type, title, date, msg){
     button.type = "button";
     button.onclick = function(){
         mainDiv.style.display = 'none';
-    }
+    };
 
     button.className = "notificaiton_button close";
 
     let buttonDiv = document.createElement("div");
-    buttonDiv.className = "notificaiton_button_panel";
+    buttonDiv.className = "notification-buttons";
 
     let acceptButton = document.createElement("button");
     acceptButton.type = "Button";
-    acceptButton.className = "btn btn-sm btn-success";
+    acceptButton.className = "btn btn btn-success";
     acceptButton.innerHTML = "Nastavi";
 
     let postponeButton = document.createElement("button");
     postponeButton.type = "Button";
-    postponeButton.className = "btn btn-sm btn-primary";
+    postponeButton.className = "btn btn-primary";
     postponeButton.innerHTML = "Odlozi"; //TODO
 
 
     buttonDiv.appendChild(acceptButton);
     buttonDiv.appendChild(postponeButton);
 
-
-    bodyDiv.appendChild(buttonDiv);
-    bodyDiv.appendChild(button);
-
     let text = document.createElement("p");
-    text.className = "notification_text";
+    // text.className = "notification_text";
     text.innerHTML = this.msg;
 
     bodyDiv.appendChild(text);
-
+    bodyDiv.appendChild(button);
+    bodyDiv.appendChild(buttonDiv);
     mainDiv.appendChild(titleDiv);
 
     mainDiv.appendChild(bodyDiv);
