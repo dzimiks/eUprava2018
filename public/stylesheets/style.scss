@@ -114,3 +114,32 @@ input[type=checkbox], input[type=radio] {
   margin: 30px auto;
   width: 50%;
 }
+
+.notification-toggle {
+  padding: 0;
+  min-width: 320px;
+
+  ul li {
+    list-style-type: none;
+    width: 100%;
+    padding: 10px;
+    border-bottom: 1px solid gray;
+
+    :last-child {
+      border: 0;
+
+      &:hover {
+        //background-color: white;
+      }
+    }
+  }
+
+  ul li:hover {
+    background-color: #e7e7e7;
+  }
+
+  ul li a {
+    color: #000;
+    text-decoration: none;
+  }
+}
