@@ -50,7 +50,6 @@ formItem input:not([type='checkbox']) {
 
 .fa-envelope {
   font-size: 1.5rem !important;
-  margin-right: 2rem !important;
 }
 
 .btn-outline-primary {
@@ -58,7 +57,6 @@ formItem input:not([type='checkbox']) {
   background-color: transparent;
   background-image: none;
   border-color: #1A4073;
-  margin-right: 30px !important;
 }
 
 .btn-outline-primary:hover {
@@ -68,5 +66,5 @@ formItem input:not([type='checkbox']) {
 }
 
 #search-button {
-  padding-right: 30px;
+  margin-right: 30px;
 }
