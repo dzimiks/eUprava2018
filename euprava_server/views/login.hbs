@@ -1,26 +1,15 @@
 <div class="container">
     <div class="row">
-        <div class="login-wrapper">
-            <div class="col-md-12">
+        <div class="login-wrapper" style="width: 40%; margin: 30px auto;">
+            <div class="card card-1">
                 <form class="form-horizontal" role="form">
-                    <h2>Informacije o nalogu</h2>
-                    <div class="form-group">
-                        <label for="userName" class="col-sm-3 control-label">Korisničko ime
-                            <span style="color: #ff0000; font-weight: 300">*</span>
-                        </label>
-                        <div class="col-sm-9">
-                            <input type="text" id="userName" placeholder="Vaše korisničko ime" class="form-control" autofocus>
-                            {{!-- <span class="help-block">Korisnicko ime sme da sadrzi samo slova i brojeve.</span> --}}
-                        </div>
-                    </div>
+                    <h2 class="text-center">Prijava</h2>
                     <div class="form-group">
                         <label for="email" class="col-sm-3 control-label">E-mail
                             <span style="color: #ff0000; font-weight: 300">*</span>
                         </label>
                         <div class="col-sm-9">
-                            <input type="email" id="email" placeholder="Vaš email" class="form-control">
-                            {{!-- <span class="help-block">Unesite validnu email. --}}
-                                {{!-- <br> Svi email-ovi iz sistema, kao i obaveštenja i dokumenta biće poslati na ovaj email.</span> --}}
+                            <input type="email" id="email" placeholder="Unesite Vaš e-mail" class="form-control">
                         </div>
                     </div>
                     <div class="form-group">
@@ -28,95 +17,22 @@
                             <span style="color: #ff0000; font-weight: 300">*</span>
                         </label>
                         <div class="col-sm-9">
-                            <input type="password" id="password" placeholder="Šifra" class="form-control">
-                            {{!-- <span class="help-block">Šifra mora da sadrži najmanje 8 karaktera.</span> --}}
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="password-repeat" class="col-sm-3 control-label">Ponovite šifru
-                            <span style="color: #ff0000; font-weight: 300">*</span>
-                        </label>
-                        <div class="col-sm-9">
-                            <input type="password" id="-repeat" placeholder="Šifra" class="form-control">
-                        </div>
-                    </div>
-                    <h2>Lične informacije</h2>
-                    <div class="form-group">
-                        <label for="firstName" class="col-sm-3 control-label">Ime
-                            <span style="color: #ff0000; font-weight: 300">*</span>
-                        </label>
-                        <div class="col-sm-9">
-                            <input type="text" id="firstName" placeholder="Vaše ime" class="form-control" autofocus> {{!--
-                            <span class="help-block">Ime, npr.: Marko</span> --}}
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="lastName" class="col-sm-3 control-label">Prezime
-                            <span style="color: #ff0000; font-weight: 300">*</span>
-                        </label>
-                        <div class="col-sm-9">
-                            <input type="text" id="lastName" placeholder="Vaše prezime" class="form-control" autofocus> {{!--
-                            <span class="help-block">Prezime, npr.: Markovic</span> --}}
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="jmbg" class="col-sm-3 control-label">JMBG
-                            <span style="color: #ff0000; font-weight: 300">*</span>
-                        </label>
-                        <div class="col-sm-9">
-                            <input type="text" id="jmbg" placeholder="JMBG" class="form-control">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="address" class="col-sm-3 control-label">Adresa
-                        </label>
-                        <div class="col-sm-9">
-                            <input type="text" id="address" placeholder="Adresa" class="form-control">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="city" class="col-sm-3 control-label">Grad
-                        </label>
-                        <div class="col-sm-9">
-                            <input type="text" id="city" placeholder="Grad" class="form-control">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="country" class="col-sm-3 control-label">Država
-                        </label>
-                        <div class="col-sm-9">
-                            <input type="text" id="country" placeholder="Država" class="form-control">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="phoneNumber" class="col-sm-3 control-label">Broj telefona
-                            <span style="color: #ff0000; font-weight: 300">*</span>
-                        </label>
-                        <div class="col-sm-9">
-                            <input type="text" id="phoneNumber" placeholder="Broj telefona" class="form-control">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="phoneNumber" class="col-sm-3 control-label">Prihvatam uslove
-                        </label>
-                        <div class="col-sm-9">
-                            <input type="checkbox" id="privacy-checkbox" >
-                            <span class="help-block">
-                                Registracijom na Portal eUprava prihvatam sledeće uslove:<br>Portal zadržava pravo da sakuplja sledeće informacije o svojim korisnicima:
-                                <br>Ime domena sa kog je pristupljeno Portalu
-                                <br>Datum i vreme pristupa Portalu
-                                <br>Datum izdavanja i isteka mojih isprava
-                                <br>
-                            </span>
+                            <input type="password" id="password" placeholder="Unesite vašu šifru" class="form-control">
                         </div>
                     </div>
                     <!-- /.form-group -->
-                    <div class="form-group text-center">
+                    <div class="form-group text-center" style="margin: 40px 0;">
                         {{!-- <div class="col-sm-9 col-sm-offset-3"> --}}
-                            <button type="submit" class="btn btn-primary btn-lg">Registruj se</button>
+                            <button type="submit" class="btn btn-primary btn-lg">Prijavi se</button>
                         {{!-- </div> --}}
                     </div>
 
+                    <hr>
+            
+                    <div style="float: right; font-size: 16px;">
+                        Nemate nalog? Registrujte se 
+                        <a href="/registracija" style="color: blue;">ovde</a>.
+                    </div>
                 </form>
                 <!-- /form -->
             </div>

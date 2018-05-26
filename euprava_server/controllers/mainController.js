@@ -28,8 +28,17 @@ module.exports.profile = function (req, res, next) {
 module.exports.login = function (req, res, next) {
   res.render('login', {
     meta: {
-      title: 'eUprava | Profile',
-      description: 'eUprava Profile Page'
+      title: 'eUprava | Login',
+      description: 'eUprava Login Page'
+    }
+  });
+};
+
+module.exports.register = function (req, res, next) {
+  res.render('register', {
+    meta: {
+      title: 'eUprava | Register',
+      description: 'eUprava Register Page'
     }
   });
 };

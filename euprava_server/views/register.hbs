@@ -1,0 +1,66 @@
+<div class="container">
+    <div class="row">
+        <div class="login-wrapper">
+            <div class="card card-1">
+                <form class="form-horizontal" role="form">
+                    <h2>Registracija</h2>
+                    <div class="form-group">
+                        <label for="jmbg" class="col-sm-3 control-label">Ime i prezime
+                            <span style="color: #ff0000; font-weight: 300">*</span>
+                        </label>
+                        <div class="col-sm-9">
+                            <input type="text" id="jmbg" placeholder="Unesite vaše ime i prezime" class="form-control" autofocus> {{!--
+                            <span class="help-block">Korisnicko ime sme da sadrzi samo slova i brojeve.</span> --}}
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="jmbg" class="col-sm-3 control-label">JMBG
+                            <span style="color: #ff0000; font-weight: 300">*</span>
+                        </label>
+                        <div class="col-sm-9">
+                            <input type="text" id="jmbg" placeholder="Unesite Vaš jedinstveni matični broj" class="form-control" autofocus> {{!--
+                            <span class="help-block">Korisnicko ime sme da sadrzi samo slova i brojeve.</span> --}}
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="email" class="col-sm-3 control-label">E-mail
+                            <span style="color: #ff0000; font-weight: 300">*</span>
+                        </label>
+                        <div class="col-sm-9">
+                            <input type="email" id="email" placeholder="Unesite Vaš e-mail" class="form-control"> {{!--
+                            <span class="help-block">Unesite validnu email. --}} {{!--
+                                <br> Svi email-ovi iz sistema, kao i obaveštenja i dokumenta biće poslati na ovaj email.</span>
+                            --}}
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="password" class="col-sm-3 control-label">Šifra
+                            <span style="color: #ff0000; font-weight: 300">*</span>
+                        </label>
+                        <div class="col-sm-9">
+                            <input type="password" id="password" placeholder="Unesite vašu šifru" class="form-control"> {{!--
+                            <span class="help-block">Šifra mora da sadrži najmanje 8 karaktera.</span> --}}
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="password-repeat" class="col-sm-3 control-label">Ponovite šifru
+                            <span style="color: #ff0000; font-weight: 300">*</span>
+                        </label>
+                        <div class="col-sm-9">
+                            <input type="password" id="-repeat" placeholder="Ponovite Vašu šifru" class="form-control">
+                        </div>
+                    </div>
+                    <!-- /.form-group -->
+                    <div class="form-group text-center">
+                        {{!--
+                        <div class="col-sm-9 col-sm-offset-3"> --}}
+                            <button type="submit" class="btn btn-primary btn-lg">Napravi novi nalog</button>
+                            {{!-- </div> --}}
+                    </div>
+                </form>
+                <!-- /form -->
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ./container -->
