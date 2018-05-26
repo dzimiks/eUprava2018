@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <title>PanRock Global</title>
 
@@ -29,7 +30,9 @@
   <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/c3/0.4.17/c3.min.css">-->
 
   <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="/vendors/bootstrap/css/bootstrap.min.css" />
+  <!--<link rel="stylesheet" href="/vendors/bootstrap/css/bootstrap.min.css" /> -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
+    crossorigin="anonymous">
 
   <!-- Font Awesome -->
   <link rel="stylesheet" href="/vendors/font-awesome/css/font-awesome.min.css">
@@ -38,40 +41,73 @@
   <link rel='stylesheet' href='/stylesheets/style.css' />
 
   <!-- jQuery library -->
-  <script type="text/javascript" src="/js/jquery-3.2.1.min.js"></script>
+  {{!--
+  <script type="text/javascript" src="/js/jquery-3.2.1.min.js"></script> --}}
   <!--<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>-->
 
 
 </head>
+
 <body>
+  <nav class="navbar navbar-expand-lg navbar-light" style="background-color: white;">
+    <a class="navbar-brand" href="#">
+      <img src="/images/eUprava.svg" style="width:150px; ">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02"
+      aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse " id="navbarColor02">
+      <ul class="navbar-nav justify-content-end">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home
+            <span class="sr-only">(current)</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Features</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Pricing</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">About</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <!-- Page content -->
+  <main id="main">
+    <div class="wrapper">
+      {{{ body }}}
+      <div class="push"></div>
+    </div>
+  </main>
 
-<!-- Page content -->
-<main id="main">
+  <!-- Bootstrap: Latest compiled JavaScript -->
+  <!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
+  <!--<script src="/vendors/bootstrap/dist/js/bootstrap.min.js"></script>-->
 
-  <div class="wrapper">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
+    crossorigin="anonymous"></script>
 
-    {{{ body }}}
+  <!-- Bootstrap: Latest compiled JavaScript -->
+  {{!--
+  <script src="/vendors/bootstrap/js/bootstrap.min.js"></script> --}}
+  <!-- Slick Slider JS -->
+  <!--<script type="text/javascript" src="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.7.1/slick/slick.min.js"></script>-->
 
-    <div class="push"></div>
+  <!-- Load d3.js and c3.js -->
+  <!--<script src="https://d3js.org/d3.v3.min.js"></script>-->
+  <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/c3/0.4.17/c3.min.js"></script>-->
 
-  </div>
-</main>
-
-<!-- Bootstrap: Latest compiled JavaScript -->
-<!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
-<!--<script src="/vendors/bootstrap/dist/js/bootstrap.min.js"></script>-->
-
-<!-- Bootstrap: Latest compiled JavaScript -->
-<script src="/vendors/bootstrap/js/bootstrap.min.js"></script>
-<!-- Slick Slider JS -->
-<!--<script type="text/javascript" src="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.7.1/slick/slick.min.js"></script>-->
-
-<!-- Load d3.js and c3.js -->
-<!--<script src="https://d3js.org/d3.v3.min.js"></script>-->
-<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/c3/0.4.17/c3.min.js"></script>-->
-
-<!-- Main JS -->
-<script type="text/javascript" src="/js/main.js"></script>
+  <!-- Main JS -->
+  <script type="text/javascript" src="/js/main.js"></script>
 
 </body>
+
 </html>
