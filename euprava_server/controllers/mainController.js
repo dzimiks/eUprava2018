@@ -1,7 +1,7 @@
 module.exports.home = function (req, res, next) {
     res.render('home', {
         meta: {
-            title: 'Home',
+            title: 'eUprava | Home',
             description: 'eUprava Home Page'
         }
     });
@@ -10,7 +10,7 @@ module.exports.home = function (req, res, next) {
 module.exports.profile = function (req, res, next) {
     res.render('profile', {
         meta: {
-            title: 'Profile',
+            title: 'eUprava | Profile',
             description: 'eUprava Profile Page'
         }
     });
