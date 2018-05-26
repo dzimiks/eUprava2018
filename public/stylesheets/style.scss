@@ -1,6 +1,7 @@
 @import "font";
 @import "home";
 @import "profile";
+@import "services";
 
 * {
   box-sizing: border-box;
@@ -12,11 +13,12 @@ body {
   height: 100%;
   //font: 14px Verdana, Arial, sans-serif;
   font: 14px "Roboto", sans-serif;
-  background-color: white;
+  background-color: #f9f9f9;
+  //background: linear-gradient(to bottom, #adf3ff 0%, #ff99cc 100%);
 }
 
 .navbar-form {
-  max-width: 300px !important;
+  max-width: 500px !important;
 }
 
 .navbar-nav .nav-link {

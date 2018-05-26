@@ -15,6 +15,49 @@ $(document).ready(function () {
     $(".btn:first-child").text($(this).text());
     $(".btn:first-child").val($(this).text());
   });
+
+  // ======
+  // Search
+  // ======
+  let searchResults = [
+    'awesome',
+    'bakery',
+    'creator',
+    'doritos',
+    'efficient',
+    'falafel',
+    'great work',
+    'high times',
+    'idiom',
+    'jargon',
+    'krill',
+    'lazy',
+    'masters',
+    'nope',
+    'opacity',
+    'purple rain',
+    'quaint',
+    'readability',
+    'simpleton',
+    'terrible',
+    'umqua',
+    'verocious',
+    'waffles',
+    'x-rays',
+    'yard sale',
+    'zappos'
+  ];
+
+  let escapeChars = '/\\/|\\\\|\\.|\\||\\*|\\&|\\+|\\(|\\)|\\[|\\]|\\?|\\$|\\^/g';
+  let match = '/[A-Z]?[a-z]+|[0-9]+/g';
+  let keys = [13, 9];
+  let resultsLength = searchResults.length;
+  let searchContainer = $('.search-container');
+  let searchText = $('.search-text');
+  let search = $('.search-bar');
+  let searchTextPlaceholder = searchText.val();
+
+
 });
 
 function NotificationFinal(title, msg){
