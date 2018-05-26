@@ -10,6 +10,7 @@ router.all('/*', function (req, res, next) {
 });
 
 router.get('/', mainCtrlr.home);
+router.get('/usluge', mainCtrlr.services);
 router.get('/profil', mainCtrlr.profile);
 router.get('/prijava', mainCtrlr.login);
 

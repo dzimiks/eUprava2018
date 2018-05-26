@@ -7,6 +7,15 @@ module.exports.home = function (req, res, next) {
     });
 };
 
+module.exports.services = function (req, res, next) {
+  res.render('services', {
+    meta: {
+      title: 'eUprava | Services',
+      description: 'eUprava Services Page'
+    }
+  });
+};
+
 module.exports.profile = function (req, res, next) {
     res.render('profile', {
         meta: {
