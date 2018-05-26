@@ -6,3 +6,12 @@ module.exports.home = function (req, res, next) {
         }
     });
 };
+
+module.exports.profile = function (req, res, next) {
+    res.render('profile', {
+        meta: {
+            title: 'Profile',
+            description: 'eUprava Profile Page'
+        }
+    });
+};
