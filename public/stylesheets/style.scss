@@ -62,7 +62,7 @@ formItem input:not([type='checkbox']) {
 }
 
 .fa-envelope {
-  font-size: 1.8rem !important;
+  font-size: 2.2rem !important;
 }
 
 .btn-outline-primary {
@@ -80,4 +80,12 @@ formItem input:not([type='checkbox']) {
 
 #search-button {
   margin-right: 30px;
+}
+
+.badge-notify {
+  background: red;
+  position: absolute;
+  top: 5px;
+  left: 23px;
+  padding: 3px 5px !important;
 }
