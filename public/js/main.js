@@ -16,10 +16,14 @@ $(document).ready(function () {
     $(".btn:first-child").val($(this).text());
   });
 
+  $(document).on('click', '.nav-item', function(e) {
+    $(".navbar-nav li .active").removeClass("active");
+    $(e.target).addClass("active");
+  });
+
   // ======
   // Search
   // ======
-
   function autocomplete(inp, arr) {
     /*the autocomplete function takes two arguments,
     the text field element and an array of possible autocompleted values:*/

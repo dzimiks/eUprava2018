@@ -3,6 +3,22 @@
   margin: 20px auto;
 }
 
+.solutions-item {
+
+  button {
+    text-align: center;
+    margin: 0 auto;
+
+    a {
+      text-decoration: none;
+    }
+  }
+}
+
+.solutions-sublist {
+  margin-bottom: 20px;
+}
+
 .autocomplete {
   /*the container must be positioned relative:*/
   position: relative;
