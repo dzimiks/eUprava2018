@@ -10,5 +10,6 @@ router.all('/*', function (req, res, next) {
 });
 
 router.get('/', mainCtrlr.home);
+router.get('/profile', mainCtrlr.profile);
 
 module.exports = router;
