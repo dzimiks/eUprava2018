@@ -46,3 +46,13 @@ module.exports.register = function (req, res, next) {
     }
   });
 };
+
+module.exports.edelivery = function (req, res, next) {
+  res.render('e-delivery', {
+    meta: {
+      title: 'eUprava | E Dostava',
+      description: 'eUprava E Dostava Page',
+      edostava: 'e-dostava'
+    }
+  });
+};

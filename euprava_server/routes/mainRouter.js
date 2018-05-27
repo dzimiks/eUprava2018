@@ -14,5 +14,6 @@ router.get('/usluge', mainCtrlr.services);
 router.get('/profil', mainCtrlr.profile);
 router.get('/prijava', mainCtrlr.login);
 router.get('/registracija', mainCtrlr.register);
+router.get('/e-dostava', mainCtrlr.edelivery);
 
 module.exports = router;
