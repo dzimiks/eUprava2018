@@ -24,6 +24,18 @@ module.exports = function (sequelize, Sequelize) {
             type: Sequelize.STRING,
             notEmpty: true
         },
+        zanimanje:{
+            type: Sequelize.STRING,
+            notEmpty: true
+        },
+        adresa:{
+            type: Sequelize.STRING,
+            notEmpty: true
+        },
+        pol:{
+            type: Sequelize.STRING,
+            notEmpty: true
+        },
         korisnickoIme: {
             type: Sequelize.STRING,
         },
@@ -34,11 +46,7 @@ module.exports = function (sequelize, Sequelize) {
             type: Sequelize.STRING
         },
         statusKorisnika: {
-            type: Sequelize.BOOLEAN,
-            validate: {
-                isEmail: true
-            },
-            unique: true
+            type: Sequelize.BOOLEAN
         }
 
     }, {
