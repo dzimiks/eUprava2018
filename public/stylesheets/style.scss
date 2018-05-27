@@ -3,6 +3,7 @@
 @import "profile";
 @import "services";
 @import "e-delivery";
+@import "footer";
 
 * {
   box-sizing: border-box;
@@ -18,6 +19,10 @@ body {
   //background: linear-gradient(to bottom, #adf3ff 0%, #ff99cc 100%);
 }
 
+.btn-primary {
+  background-color: #1A4073 !important;
+}
+
 .navbar-form {
   max-width: 500px !important;
 }
@@ -29,14 +34,11 @@ body {
 }
 
 .footer {
-  position: fixed;
-  left: 0;
-  bottom: 0;
+  margin-top: 30px;
   width: 100%;
-  background-color: red;
   color: white;
-  text-align: center;
-  height: 46px;
+  //text-align: center;
+  //height: 150px;
 }
 
 .navbar-nav .nav-link {
@@ -98,7 +100,7 @@ input[type=checkbox], input[type=radio] {
   margin: 10px 0 0 !important;
 }
 
-.fa-envelope {
+.nav-link .fa-envelope {
   font-size: 2.2rem !important;
 }
 
@@ -174,4 +176,68 @@ input[type=checkbox], input[type=radio] {
   color: white;
   background-color: #1A4073;
   border-color: #1A4073;
+}
+
+// Popover Call button
+#fab-call {
+  position: fixed;
+  z-index: 999999;
+  bottom: 15px;
+  right: 10px;
+  width: 45px;
+  height: 45px;
+  cursor: pointer;
+  background-color: #b84242;
+  border-radius: 50%;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+
+  &:hover {
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  }
+
+  .fab-call-image {
+    border-radius: 50%;
+    width: 100%;
+  }
+}
+
+.fab-call-button {
+  position: fixed;
+  color: white;
+  margin: 11px 13px;
+  border: none;
+  outline: none;
+
+  &:hover,
+  &:focus {
+    color: white;
+    outline: none;
+  }
+
+  .fa {
+    font-size: 25px;
+  }
+}
+
+.popover {
+  top: -150px !important;
+  left: -283px !important;
+}
+
+.popover-title {
+  text-align: left;
+  padding: 3px !important;
+}
+
+.popover-content {
+
+  .btn-warning {
+    background-color: #b84242 !important;
+    border-color: #9c3a3a !important;
+
+    &:hover {
+      background-color: #cd4848 !important;
+      border-color: #b84242 !important;
+    }
+  }
 }
