@@ -36,6 +36,9 @@ module.exports = function (sequelize, Sequelize) {
             type: Sequelize.STRING,
             notEmpty: true
         },
+        kljuc: {
+            type: Sequelize.STRING
+        },
         pol:{
             type: Sequelize.STRING,
             notEmpty: true

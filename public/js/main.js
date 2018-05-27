@@ -4,10 +4,10 @@ $(document).ready(function () {
   $(window).resize(function () {
     var footerHeight = $('.footer').outerHeight();
     $('.push').height(footerHeight);
-  
-    $('.wrapper').css({'marginBottom': '-' + footerHeight + 'px'});
+
+    $('.wrapper').css({ 'marginBottom': '-' + footerHeight + 'px' });
   });
-  
+
   $(window).resize();
 
   $('[data-toggle="popover"]').popover({
@@ -26,12 +26,48 @@ $(document).ready(function () {
           '</div>';
     }
   });
+  
+  if (localStorage.getItem("jmbg")) {
+    $("#prijava-link").text("Odjava");
+  }
 
   // login
-  $(document).on('click', '#login', function(e) {
+  $(document).on('click', '#login', function (e) {
     let email = $("#email").val();
     let password = $("#password").val();
-    $.post( "/prijava", { email: email, password: password }, function( data ) {
+    $.post("/prijava", { email: email, password: password }, function (data) {
+      if (data.ok) {
+        localStorage.setItem("email", email);
+        console.log("Uspesno i jmbg=" + data.jmbg);
+        window.location.replace("/verifikacija");
+      } else {
+        console.log("neuspesno logovanje");
+      }
+    });
+  });
+
+  $(document).on('click', '#prijava', function (e) {
+    if (localStorage.getItem("jmbg")) {
+      localStorage.removeItem("jmbg");
+      localStorage.removeItem("email");
+    }
+  });
+
+  $(document).on('click', '#profil', function (e) {
+    console.log("evo me");
+
+    if (!localStorage.getItem("jmbg")) {
+      e.preventDefault();
+      window.location.replace("/prijava");
+    }
+  });
+
+
+  // verify
+  $(document).on('click', '#verify', function (e) {
+    let email = localStorage.getItem("email");
+    let key = $("#key").val();
+    $.post("/verifikacija", { email: email, key: key }, function (data) {
       if (data.jmbg) {
         console.log("Uspesne i jmbg=" + data.jmbg);
         localStorage.setItem("jmbg", data.jmbg);
@@ -43,7 +79,7 @@ $(document).ready(function () {
   });
 
   // Dropdown event
-  $(".timeline-card .dropdown-menu li a").click(function(){
+  $(".timeline-card .dropdown-menu li a").click(function () {
     $(".btn:first-child").text($(this).text());
     $(".btn:first-child").val($(this).text());
   });
@@ -70,11 +106,11 @@ $(document).ready(function () {
     the text field element and an array of possible autocompleted values:*/
     var currentFocus;
     /*execute a function when someone writes in the text field:*/
-    inp.addEventListener("input", function(e) {
+    inp.addEventListener("input", function (e) {
       var a, b, i, val = this.value;
       /*close any already open lists of autocompleted values*/
       closeAllLists();
-      if (!val) { return false;}
+      if (!val) { return false; }
       currentFocus = -1;
       /*create a DIV element that will contain the items (values):*/
       a = document.createElement("DIV");
@@ -94,7 +130,7 @@ $(document).ready(function () {
           /*insert a input field that will hold the current array item's value:*/
           b.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
           /*execute a function when someone clicks on the item value (DIV element):*/
-          b.addEventListener("click", function(e) {
+          b.addEventListener("click", function (e) {
             /*insert the value for the autocomplete text field:*/
             inp.value = this.getElementsByTagName("input")[0].value;
             /*close the list of autocompleted values,
@@ -106,7 +142,7 @@ $(document).ready(function () {
       }
     });
     /*execute a function presses a key on the keyboard:*/
-    inp.addEventListener("keydown", function(e) {
+    inp.addEventListener("keydown", function (e) {
       var x = document.getElementById(this.id + "autocomplete-list");
       if (x) x = x.getElementsByTagName("div");
       if (e.keyCode == 40) {
@@ -163,7 +199,7 @@ $(document).ready(function () {
   }
 
   /*An array containing all the country names in the world:*/
-  var countries = ["Afghanistan","Albania","Algeria","Andorra","Angola","Anguilla","Antigua & Barbuda","Argentina","Armenia","Aruba","Australia","Austria","Azerbaijan","Bahamas","Bahrain","Bangladesh","Barbados","Belarus","Belgium","Belize","Benin","Bermuda","Bhutan","Bolivia","Bosnia & Herzegovina","Botswana","Brazil","British Virgin Islands","Brunei","Bulgaria","Burkina Faso","Burundi","Cambodia","Cameroon","Canada","Cape Verde","Cayman Islands","Central Arfrican Republic","Chad","Chile","China","Colombia","Congo","Cook Islands","Costa Rica","Cote D Ivoire","Croatia","Cuba","Curacao","Cyprus","Czech Republic","Denmark","Djibouti","Dominica","Dominican Republic","Ecuador","Egypt","El Salvador","Equatorial Guinea","Eritrea","Estonia","Ethiopia","Falkland Islands","Faroe Islands","Fiji","Finland","France","French Polynesia","French West Indies","Gabon","Gambia","Georgia","Germany","Ghana","Gibraltar","Greece","Greenland","Grenada","Guam","Guatemala","Guernsey","Guinea","Guinea Bissau","Guyana","Haiti","Honduras","Hong Kong","Hungary","Iceland","India","Indonesia","Iran","Iraq","Ireland","Isle of Man","Israel","Italy","Jamaica","Japan","Jersey","Jordan","Kazakhstan","Kenya","Kiribati","Kosovo","Kuwait","Kyrgyzstan","Laos","Latvia","Lebanon","Lesotho","Liberia","Libya","Liechtenstein","Lithuania","Luxembourg","Macau","Macedonia","Madagascar","Malawi","Malaysia","Maldives","Mali","Malta","Marshall Islands","Mauritania","Mauritius","Mexico","Micronesia","Moldova","Monaco","Mongolia","Montenegro","Montserrat","Morocco","Mozambique","Myanmar","Namibia","Nauro","Nepal","Netherlands","Netherlands Antilles","New Caledonia","New Zealand","Nicaragua","Niger","Nigeria","North Korea","Norway","Oman","Pakistan","Palau","Palestine","Panama","Papua New Guinea","Paraguay","Peru","Philippines","Poland","Portugal","Puerto Rico","Qatar","Reunion","Romania","Russia","Rwanda","Saint Pierre & Miquelon","Samoa","San Marino","Sao Tome and Principe","Saudi Arabia","Senegal","Serbia","Seychelles","Sierra Leone","Singapore","Slovakia","Slovenia","Solomon Islands","Somalia","South Africa","South Korea","South Sudan","Spain","Sri Lanka","St Kitts & Nevis","St Lucia","St Vincent","Sudan","Suriname","Swaziland","Sweden","Switzerland","Syria","Taiwan","Tajikistan","Tanzania","Thailand","Timor L'Este","Togo","Tonga","Trinidad & Tobago","Tunisia","Turkey","Turkmenistan","Turks & Caicos","Tuvalu","Uganda","Ukraine","United Arab Emirates","United Kingdom","United States of America","Uruguay","Uzbekistan","Vanuatu","Vatican City","Venezuela","Vietnam","Virgin Islands (US)","Yemen","Zambia","Zimbabwe"];
+  var countries = ["Afghanistan", "Albania", "Algeria", "Andorra", "Angola", "Anguilla", "Antigua & Barbuda", "Argentina", "Armenia", "Aruba", "Australia", "Austria", "Azerbaijan", "Bahamas", "Bahrain", "Bangladesh", "Barbados", "Belarus", "Belgium", "Belize", "Benin", "Bermuda", "Bhutan", "Bolivia", "Bosnia & Herzegovina", "Botswana", "Brazil", "British Virgin Islands", "Brunei", "Bulgaria", "Burkina Faso", "Burundi", "Cambodia", "Cameroon", "Canada", "Cape Verde", "Cayman Islands", "Central Arfrican Republic", "Chad", "Chile", "China", "Colombia", "Congo", "Cook Islands", "Costa Rica", "Cote D Ivoire", "Croatia", "Cuba", "Curacao", "Cyprus", "Czech Republic", "Denmark", "Djibouti", "Dominica", "Dominican Republic", "Ecuador", "Egypt", "El Salvador", "Equatorial Guinea", "Eritrea", "Estonia", "Ethiopia", "Falkland Islands", "Faroe Islands", "Fiji", "Finland", "France", "French Polynesia", "French West Indies", "Gabon", "Gambia", "Georgia", "Germany", "Ghana", "Gibraltar", "Greece", "Greenland", "Grenada", "Guam", "Guatemala", "Guernsey", "Guinea", "Guinea Bissau", "Guyana", "Haiti", "Honduras", "Hong Kong", "Hungary", "Iceland", "India", "Indonesia", "Iran", "Iraq", "Ireland", "Isle of Man", "Israel", "Italy", "Jamaica", "Japan", "Jersey", "Jordan", "Kazakhstan", "Kenya", "Kiribati", "Kosovo", "Kuwait", "Kyrgyzstan", "Laos", "Latvia", "Lebanon", "Lesotho", "Liberia", "Libya", "Liechtenstein", "Lithuania", "Luxembourg", "Macau", "Macedonia", "Madagascar", "Malawi", "Malaysia", "Maldives", "Mali", "Malta", "Marshall Islands", "Mauritania", "Mauritius", "Mexico", "Micronesia", "Moldova", "Monaco", "Mongolia", "Montenegro", "Montserrat", "Morocco", "Mozambique", "Myanmar", "Namibia", "Nauro", "Nepal", "Netherlands", "Netherlands Antilles", "New Caledonia", "New Zealand", "Nicaragua", "Niger", "Nigeria", "North Korea", "Norway", "Oman", "Pakistan", "Palau", "Palestine", "Panama", "Papua New Guinea", "Paraguay", "Peru", "Philippines", "Poland", "Portugal", "Puerto Rico", "Qatar", "Reunion", "Romania", "Russia", "Rwanda", "Saint Pierre & Miquelon", "Samoa", "San Marino", "Sao Tome and Principe", "Saudi Arabia", "Senegal", "Serbia", "Seychelles", "Sierra Leone", "Singapore", "Slovakia", "Slovenia", "Solomon Islands", "Somalia", "South Africa", "South Korea", "South Sudan", "Spain", "Sri Lanka", "St Kitts & Nevis", "St Lucia", "St Vincent", "Sudan", "Suriname", "Swaziland", "Sweden", "Switzerland", "Syria", "Taiwan", "Tajikistan", "Tanzania", "Thailand", "Timor L'Este", "Togo", "Tonga", "Trinidad & Tobago", "Tunisia", "Turkey", "Turkmenistan", "Turks & Caicos", "Tuvalu", "Uganda", "Ukraine", "United Arab Emirates", "United Kingdom", "United States of America", "Uruguay", "Uzbekistan", "Vanuatu", "Vatican City", "Venezuela", "Vietnam", "Virgin Islands (US)", "Yemen", "Zambia", "Zimbabwe"];
 
   /*initiate the autocomplete function on the "myInput" element, and pass along the countries array as possible autocomplete values:*/
   autocomplete(document.getElementById("autocompleteInput"), countries);
@@ -219,7 +255,7 @@ $(document).ready(function () {
     let matches = [];
 
     if (value) {
-      for (let i = resultsLength; i--; ) {
+      for (let i = resultsLength; i--;) {
         if (regex.test(searchResults[i])) {
           matches.push(searchResults[i]);
         }
@@ -229,7 +265,7 @@ $(document).ready(function () {
       }
 
       if (matches.length) {
-        for (let i = matches.length; i--; ) {
+        for (let i = matches.length; i--;) {
           searchText.val(matches[i]);
         }
       }
@@ -240,61 +276,61 @@ $(document).ready(function () {
   });
 });
 
-function NotificationFinal(title, msg){
+function NotificationFinal(title, msg) {
 
-    this.title = title;
-    this.msg = msg;
-    this.activeNotification =  true;
-
-
-    let mainDiv = document.createElement("div");
-    mainDiv.className = "card card-1";
-
-    let closeButton = document.createElement("span");
-    closeButton.innerHTML = "&times";
-    closeButton.className = "notificaiton_button close";
-    closeButton.onclick = function(){
-        mainDiv.style.display = 'none';
-    }
-
-    let h3Title = document.createElement("h3");
-    h3Title.innerHTML = title;
-
-    let text =  document.createElement("p");
-    text.innerHTML = msg;
-
-    //Dva dugmeta
-    let buttonDiv = document.createElement("div");
-    buttonDiv.className= "notification-buttons";
-
-    let buttonPostpone = document.createElement("button");
-    buttonPostpone.className = "btn btn-primary btn-margin";
-    buttonPostpone.type = "Button";
-    buttonPostpone.innerHTML = "Odlozi";
-
-    let buttonAccept = document.createElement("button");
-    buttonAccept.className = "btn btn-success btn-margin";
-    buttonAccept.type = "Button";
-    buttonAccept.innerHTML = "Prihvati";
+  this.title = title;
+  this.msg = msg;
+  this.activeNotification = true;
 
 
-    buttonDiv.appendChild(buttonAccept);
-    buttonDiv.appendChild(buttonPostpone);
+  let mainDiv = document.createElement("div");
+  mainDiv.className = "card card-1";
+
+  let closeButton = document.createElement("span");
+  closeButton.innerHTML = "&times";
+  closeButton.className = "notificaiton_button close";
+  closeButton.onclick = function () {
+    mainDiv.style.display = 'none';
+  }
+
+  let h3Title = document.createElement("h3");
+  h3Title.innerHTML = title;
+
+  let text = document.createElement("p");
+  text.innerHTML = msg;
+
+  //Dva dugmeta
+  let buttonDiv = document.createElement("div");
+  buttonDiv.className = "notification-buttons";
+
+  let buttonPostpone = document.createElement("button");
+  buttonPostpone.className = "btn btn-primary btn-margin";
+  buttonPostpone.type = "Button";
+  buttonPostpone.innerHTML = "Odlozi";
+
+  let buttonAccept = document.createElement("button");
+  buttonAccept.className = "btn btn-success btn-margin";
+  buttonAccept.type = "Button";
+  buttonAccept.innerHTML = "Prihvati";
 
 
-    //Main Div
-    mainDiv.appendChild(closeButton);
-    mainDiv.appendChild(h3Title);
-    mainDiv.appendChild(text);
-    mainDiv.appendChild(buttonDiv);
-
-    //Dodaje notifikaciju
-    document.getElementById("notification_panel_scroll").appendChild(mainDiv);
+  buttonDiv.appendChild(buttonAccept);
+  buttonDiv.appendChild(buttonPostpone);
 
 
-    isActive = function(){return this.activeNotification};
+  //Main Div
+  mainDiv.appendChild(closeButton);
+  mainDiv.appendChild(h3Title);
+  mainDiv.appendChild(text);
+  mainDiv.appendChild(buttonDiv);
 
-    setActive = function(active) {this.activeNotification = active};
+  //Dodaje notifikaciju
+  document.getElementById("notification_panel_scroll").appendChild(mainDiv);
+
+
+  isActive = function () { return this.activeNotification };
+
+  setActive = function (active) { this.activeNotification = active };
 }
 
 var not1 = new NotificationFinal("ALOOOO", "Idemo nissss idemo nissss idemo idemo idemo idemo");

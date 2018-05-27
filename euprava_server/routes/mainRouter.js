@@ -13,12 +13,14 @@ router.get('/', mainCtrlr.home);
 router.get('/usluge', mainCtrlr.services);
 router.get('/profil', mainCtrlr.profile);
 router.get('/prijava', mainCtrlr.login);
+router.get('/verifikacija', mainCtrlr.verification);
 router.get('/registracija', mainCtrlr.register);
 router.get('/e-dostava', mainCtrlr.edelivery);
 
 router.post('/prijava', mainCtrlr.prijava);
 router.post('/korisnik', mainCtrlr.korisnik);
 router.post('/notifikacija', mainCtrlr.notifikacija);
+router.post('/verifikacija', mainCtrlr.verifikacija);
 
 
 module.exports = router;
