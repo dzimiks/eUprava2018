@@ -10,6 +10,23 @@ $(document).ready(function () {
   
   $(window).resize();
 
+  $('[data-toggle="popover"]').popover({
+    html: true,
+    placement: 'left',
+    trigger: 'focus',
+    content: function () {
+      return '<div class="row row-eq-height">' +
+          '<div class="col-xs-12 text-left">' +
+          '<h4 class="text-center">eUprava Asistent</h4><hr>' +
+          '<h5>Potrebna vam je pomoc? Kontaktirajte nasu podrsku!</h5>' +
+          '<h5>Email: <a href="mailto:euprava@gmail.com" style="color: blue; text-decoration: none;">euprava@gmail.com</a></h5>' +
+          '<div class="text-center"><a href="tel:+12025550132">' +
+          '<button class="btn btn-warning btn-md">Pozivni broj</button>' +
+          '</a></div></div>' +
+          '</div>';
+    }
+  });
+
   // login
   $(document).on('click', '#login', function(e) {
     let email = $("#email").val();
