@@ -17,7 +17,7 @@ $(document).ready(function () {
     content: function () {
       return '<div class="row row-eq-height">' +
           '<div class="col-xs-12 text-left">' +
-          '<h4 class="text-center">еУправа Асистент</h4><hr>' +
+          '<h4 class="text-center" style="font-weight: bold;">еУправа Асистент</h4><hr>' +
           '<h5>Потребна вам је помоћ? Контактирајте нашу подршку!</h5>' +
           '<h5>Емаил: <a href="mailto:euprava@gmail.com" style="color: blue; text-decoration: none;">euprava@gmail.com</a></h5>' +
           '<div class="text-center"><a href="tel:+12025550132">' +
@@ -517,23 +517,23 @@ function NotificationFinal(title, msg) {
 //   var not3 = new NotificationFinal("Регистрација возила ускоро истиче", "Молимо Вас да у што краћем року предате папирологију.");
 // }, 2000);
 var not1 = new NotificationFinal("Пасош ускоро истиче", "Пасош Вам ускоро истиче. Кликните Настави за приступ еФормулару за продужетак пасоша.");
-//var not2 = new NotificationFinal("Лична карта ускоро истиче", "Молимо Вас да у што краћем року предате папирологију.");
+var not2 = new NotificationFinal("Лична карта ускоро истиче", "Молимо Вас да у што краћем року предате папирологију.");
 // var not3 = new NotificationFinal("AAAAA", "BBBBBBBBBBBBBBBBBBB");
 
 // setInterval(function() {
-  var not2 = new NotificationFinal("Регистрација возила ускоро истиче", "Регистрација возила Вам ускоро истиче. Кликните Настави за приступ еФормулару.");
+//   var not2 = new NotificationFinal("Регистрација возила ускоро истиче", "Регистрација возила Вам ускоро истиче. Кликните Настави за приступ еФормулару.");
 // }, 3000);
 
 
 
-for (var i = 0; i < 3; i++) {
+for (var i = 0; i < 2; i++) {
   setTimeout(function(y) {
-    var not3 = new NotificationFinal("Регистрација возила ускоро истиче", "Молимо Вас да у што краћем року предате папирологију.");
+    var not3 = new NotificationFinal("Регистрација возила ускоро истиче", "Регистрација возила Вам ускоро истиче. Кликните Настави за приступ еФормулару.");
     setInterval(function () {
-      $(".alert").fadeTo(4000, 7000).slideUp(700, function(){
+      $(".alert").fadeTo(4000, 7000).slideUp(700, function() {
         $(this).remove();
       });
     }, 1000);
-  }, 5000);
+  }, 180000);
 }
 
