@@ -132,14 +132,14 @@
             </tr>
             </tbody>
           </table>
+          <div class="alert alert-success text-center success-delivery" style="width: 70%; margin: 0 auto; display: none;">
+            <strong>Uspesno ste potvrdili dostavu!</strong> Uskoro ce poceti preuzimanje dokumenta
+          </div>
         </div>
-        <!--<div>-->
-          <!--<button class="btn btn-success" style="float: right">Potvrdi dostavu</button>-->
-        <!--</div>-->
       </div>
       <div class="modal-body" style="text-align: right">
         <a href="/pdfs/dzimiks.pdf" download>
-          <button class="btn btn-success">Potvrdi dostavu</button>
+          <button class="btn btn-primary" id="btn-delivery-1">Potvrdi dostavu</button>
         </a>
       </div>
     </div>
@@ -175,14 +175,14 @@
             </tr>
             </tbody>
           </table>
+          <div class="alert alert-success text-center success-delivery" style="width: 70%; margin: 0 auto; display: none;">
+            <strong>Uspesno ste potvrdili dostavu!</strong> Uskoro ce poceti preuzimanje dokumenta
+          </div>
         </div>
-        <!--<div>-->
-        <!--<button class="btn btn-success" style="float: right">Potvrdi dostavu</button>-->
-        <!--</div>-->
       </div>
       <div class="modal-body" style="text-align: right">
         <a href="/pdfs/dzimiks.pdf" download>
-          <button class="btn btn-success">Potvrdi dostavu</button>
+          <button class="btn btn-primary" id="btn-delivery-2">Potvrdi dostavu</button>
         </a>
       </div>
     </div>
@@ -218,14 +218,14 @@
             </tr>
             </tbody>
           </table>
+          <div class="alert alert-success text-center success-delivery" style="width: 70%; margin: 0 auto; display: none;">
+            <strong>Uspesno ste potvrdili dostavu!</strong> Uskoro ce poceti preuzimanje dokumenta
+          </div>
         </div>
-        <!--<div>-->
-        <!--<button class="btn btn-success" style="float: right">Potvrdi dostavu</button>-->
-        <!--</div>-->
       </div>
       <div class="modal-body" style="text-align: right">
         <a href="/pdfs/dzimiks.pdf" download>
-          <button class="btn btn-success">Potvrdi dostavu</button>
+          <button class="btn btn-primary" id="btn-delivery-3">Potvrdi dostavu</button>
         </a>
       </div>
     </div>
@@ -261,14 +261,14 @@
             </tr>
             </tbody>
           </table>
+          <div class="alert alert-success text-center success-delivery" style="width: 70%; margin: 0 auto; display: none;">
+            <strong>Uspesno ste potvrdili dostavu!</strong> Uskoro ce poceti preuzimanje dokumenta
+          </div>
         </div>
-        <!--<div>-->
-        <!--<button class="btn btn-success" style="float: right">Potvrdi dostavu</button>-->
-        <!--</div>-->
       </div>
       <div class="modal-body" style="text-align: right">
         <a href="/pdfs/dzimiks.pdf" download>
-          <button class="btn btn-success">Potvrdi dostavu</button>
+          <button class="btn btn-primary" id="btn-delivery-4">Potvrdi dostavu</button>
         </a>
       </div>
     </div>
@@ -304,14 +304,14 @@
             </tr>
             </tbody>
           </table>
+          <div class="alert alert-success text-center success-delivery" style="width: 70%; margin: 0 auto; display: none;">
+            <strong>Uspesno ste potvrdili dostavu!</strong> Uskoro ce poceti preuzimanje dokumenta
+          </div>
         </div>
-        <!--<div>-->
-        <!--<button class="btn btn-success" style="float: right">Potvrdi dostavu</button>-->
-        <!--</div>-->
       </div>
       <div class="modal-body" style="text-align: right">
         <a href="/pdfs/dzimiks.pdf" download>
-          <button class="btn btn-success">Potvrdi dostavu</button>
+          <button class="btn btn-primary" id="btn-delivery-5">Potvrdi dostavu</button>
         </a>
       </div>
     </div>
@@ -347,14 +347,14 @@
             </tr>
             </tbody>
           </table>
+          <div class="alert alert-success text-center success-delivery" style="width: 70%; margin: 0 auto; display: none;">
+            <strong>Uspesno ste potvrdili dostavu!</strong> Uskoro ce poceti preuzimanje dokumenta
+          </div>
         </div>
-        <!--<div>-->
-        <!--<button class="btn btn-success" style="float: right">Potvrdi dostavu</button>-->
-        <!--</div>-->
       </div>
       <div class="modal-body" style="text-align: right">
         <a href="/pdfs/dzimiks.pdf" download>
-          <button class="btn btn-success">Potvrdi dostavu</button>
+          <button class="btn btn-primary" id="btn-delivery-6">Potvrdi dostavu</button>
         </a>
       </div>
     </div>
@@ -390,14 +390,14 @@
             </tr>
             </tbody>
           </table>
+          <div class="alert alert-success text-center success-delivery" style="width: 70%; margin: 0 auto; display: none;">
+            <strong>Uspesno ste potvrdili dostavu!</strong> Uskoro ce poceti preuzimanje dokumenta
+          </div>
         </div>
-        <!--<div>-->
-        <!--<button class="btn btn-success" style="float: right">Potvrdi dostavu</button>-->
-        <!--</div>-->
       </div>
       <div class="modal-body" style="text-align: right">
         <a href="/pdfs/dzimiks.pdf" download>
-          <button class="btn btn-success">Potvrdi dostavu</button>
+          <button class="btn btn-primary" id="btn-delivery-7">Potvrdi dostavu</button>
         </a>
       </div>
     </div>
@@ -405,7 +405,13 @@
 </div>
 
 <script>
-  document.addEventListener("DOMContentLoaded", function(event) {
+  document.addEventListener("DOMContentLoaded", function(e) {
     $('body').css('background-color', 'white');
+
+    $('#btn-delivery-1').click(function () {
+      setTimeout(function() {
+        $('.success-delivery').css('display', 'block');
+      }, 300);
+    });
   });
 </script>
