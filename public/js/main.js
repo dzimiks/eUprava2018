@@ -21,6 +21,13 @@ $(document).ready(function () {
     $(e.target).addClass("active");
   });
 
+  var url_string = window.location.href;
+  var url = new URL(url_string);
+  var c = url.searchParams.get("id");
+  console.log(c);
+
+  $('#' + c).modal('show');
+
   // ======
   // Search
   // ======

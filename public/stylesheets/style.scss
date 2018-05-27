@@ -22,6 +22,12 @@ body {
   max-width: 500px !important;
 }
 
+.dropdown-toggle {
+  &:hover {
+    cursor: pointer;
+  }
+}
+
 .navbar-nav .nav-link {
   color: #1A4073 !important;
   font-size: 16px !important;
