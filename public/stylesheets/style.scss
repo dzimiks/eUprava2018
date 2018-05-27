@@ -15,8 +15,10 @@ body {
   height: 100%;
   //font: 14px Verdana, Arial, sans-serif;
   font: 14px "Roboto", sans-serif;
-  background-color: #f9f9f9;
-  //background: linear-gradient(to bottom, #adf3ff 0%, #ff99cc 100%);
+  background-color: #F7F9FA;
+ // background: linear-gradient(to bottom, #ffffff 19%, #1a4073 198%);
+ // background: linear-gradient(to bottom, #ffffff 19%, #1a4073 70%);
+    //background: linear-gradient(to bottom, #adf3ff 0%, #ff99cc 100%);
 }
 
 .btn-primary {
@@ -262,4 +264,9 @@ input[type=checkbox], input[type=radio] {
       border-color: #b84242 !important;
     }
   }
+}
+
+
+.terms{
+  color: #1A4073 !important;
 }

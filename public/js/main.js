@@ -477,12 +477,19 @@ function NotificationFinal(title, msg) {
   buttonPostpone.className = "btn btn-danger btn-margin";
   buttonPostpone.type = "Button";
   buttonPostpone.innerHTML = "Одложи";
+  buttonPostpone.id = "branko";
+  buttonPostpone.onclick = function () {
+    mainDiv.style.display = 'none';
+  } 
 
   let buttonAccept = document.createElement("button");
-  buttonAccept.className = "btn btn-success btn-margin";
+  buttonAccept.className = "btn btn-success btn-margin milos";
   buttonAccept.type = "Button";
   buttonAccept.innerHTML = "Настави";
 
+  $(".milos").attr('data-toggle','modal');
+  $(".milos").attr('data-target','#cardModal');
+  
 
   buttonDiv.appendChild(buttonAccept);
   buttonDiv.appendChild(buttonPostpone);
@@ -503,12 +510,21 @@ function NotificationFinal(title, msg) {
   setActive = function (active) { this.activeNotification = active };
 }
 
-var not1 = new NotificationFinal("Пасош ускоро истиче", "Молимо Вас да у што краћем року предате папирологију.");
-var not2 = new NotificationFinal("Лична карта ускоро истиче", "Молимо Вас да у што краћем року предате папирологију.");
+// var not1 = new NotificationFinal("Пасош ускоро истиче", "Молимо Вас да у што краћем року предате папирологију.");
+// var not2 = new NotificationFinal("Лична карта ускоро истиче", "Молимо Вас да у што краћем року предате папирологију.");
 
 // setInterval(function() {
 //   var not3 = new NotificationFinal("Регистрација возила ускоро истиче", "Молимо Вас да у што краћем року предате папирологију.");
 // }, 2000);
+var not1 = new NotificationFinal("Пасош ускоро истиче", "Пасош Вам ускоро истиче. Кликните Настави за приступ еФормулару за продужетак пасоша.");
+//var not2 = new NotificationFinal("Лична карта ускоро истиче", "Молимо Вас да у што краћем року предате папирологију.");
+// var not3 = new NotificationFinal("AAAAA", "BBBBBBBBBBBBBBBBBBB");
+
+// setInterval(function() {
+  var not2 = new NotificationFinal("Регистрација возила ускоро истиче", "Регистрација возила Вам ускоро истиче. Кликните Настави за приступ еФормулару.");
+// }, 3000);
+
+
 
 for (var i = 0; i < 3; i++) {
   setTimeout(function(y) {

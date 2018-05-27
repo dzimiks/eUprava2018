@@ -11,62 +11,219 @@
       </div>
       <hr>
       <div id="notification_panel_scroll">
-
       </div>
     </div>
+
+    <div class="modal fade" id="cardModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h3 class="modal-title" id="exampleModalLabel"><b>еФормулар</b></h3>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            {{!-- Forma za modal expanduje se --}}
+            <div class="panel panel-default" style="margin:10px auto !important" id="izdavanje_pasosa">
+              <div class="panel-heading">
+                <h4 class="panel-title">
+                  <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+                    <span class="glyphicon glyphicon-th-list" style="margin-right: 5px;"> </span>Захтев за издавање пасоша</a>
+                </h4>
+              </div>
+              <div id="collapseThree" class="">
+                <div class="panel-body">
+                  <div class="row">
+                    <div class="col-md-6">
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="monitor">Јединствени матични број грађана:</label>
+                        <input type="text" class="form-control" id='monitor' />
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="date">Датум рођења:</label>
+                        <input type="text" class="form-control" id='date' />
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="consented">Име и презиме:</label>
+                        <input type="text" class="form-control" id='consented' />
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="entered">Место, општина рођења:</label>
+                        <input type="text" class="form-control" id='entered' />
+                      </div>
+                    </div>
+
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="completed">Девојачко име:</label>
+                        <input type="text" class="form-control" id='completed' />
+                      </div>
+                    </div>
+
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="completed">Држављанство:</label>
+                        <input type="text" class="form-control" id='completed' />
+                      </div>
+                    </div>
+
+
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="discontinued">Име родитеља:</label>
+                        <input type="text" class="form-control" id='discontinued' />
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="status">Пол:</label>
+                        <select class="form-control" id="status">
+                          <option>Мушки</option>
+                          <option>Женски</option>
+                          <option>Не желим да се изјасним</option>
+                        </select>
+                      </div>
+                    </div>
+
+
+
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="sites3">Занимање:</label>
+                        <input type="text" class="form-control" id='sites3' />
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="enrollment">Адреса пребивалишта:</label>
+                        <input type="text" class="form-control" id='enrollment' />
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="Duration2">Држава у коју путујете:</label>
+                        <input type="text" class="form-control" id='Duration2' />
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label class="control-label" for="risk">Служење војног рока</label>
+                        <div class="controls" style="margin-left: 20px;">
+                          <label class="radio" for="risk-0">
+                            <input type="radio" name="risk" id="risk-0" value="True" checked="checked"> Јесам
+                          </label>
+                          <label class="radio" for="risk-1">
+                            <input type="radio" name="risk" id="risk-1" value="False"> Нисам
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="enrollment">Дужина боравка:</label>
+                        <input type="text" class="form-control" id='enrollment' />
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">Откажи</button>
+            <button type="button" class="btn btn-success" data-dismiss="modal">Пошаљи</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
   </div>
 
   <div class="col-md-9" style="margin: 30px auto;">
     <h1 style="margin-bottom: 20px;">Статус мојих захтева</h1>
 
     <ul class="nav nav-tabs">
-      <li class="active"><a data-toggle="tab" href="#licna" style="color: black;">Продужење личне карте</a></li>
-      <li><a data-toggle="tab" href="#pasos" style="color: black;">Pasos</a></li>
-      <li><a data-toggle="tab" href="#overenja" style="color: black;">Overenja</a></li>
+      <li class="active">
+        <a data-toggle="tab" href="#licna" style="color: black;">Продужење здравствене књижице</a>
+      </li>
+      <li>
+        <a data-toggle="tab" href="#pasos" style="color: black;">Pasos</a>
+      </li>
+      <li>
+        <a data-toggle="tab" href="#overenja" style="color: black;">Overenja</a>
+      </li>
     </ul>
 
     <div class="tab-content">
       <div id="licna" class="tab-pane fade in active">
 
         <div class="timeline-card" style="margin-top: 30px;">
-          <div style="display:inline-block;width:100%;overflow-x:hidden;">
+          <div style="display:inline-block;width:100%;overflow-y:auto;">
             <ul class="timeline timeline-horizontal">
 
               <li class="timeline-item">
-                <div class="timeline-badge success"><i class="fa fa-check-circle"></i></div>
+                <div class="timeline-badge success">
+                  <i class="fa fa-check-circle"></i>
+                </div>
                 <div class="timeline-panel">
                   <div class="timeline-heading">
-                    <h4 class="timeline-title">Pasos</h4>
-                    <p><small class="text-muted"><i class="fa fa-clock-o"></i> 23.07.2018.</small></p>
+                    <h4 class="timeline-title">Захтев је предат</h4>
+                    <p>
+                      <small class="text-muted">
+                        <i class="fa fa-clock-o"></i> 23.09.2018.</small>
+                    </p>
                   </div>
                   <div class="timeline-body">
-                    <p>Poslata prijava za pasos.</p>
+                    <p>Успешно сте предали еФормулар за продужење здравствене књижице.</p>
                   </div>
                 </div>
               </li>
 
               <li class="timeline-item">
-                <div class="timeline-badge warning"><i class="fa fa-check-circle"></i></div>
+                <div class="timeline-badge warning">
+                  <i class="fa fa-check-circle"></i>
+                </div>
                 <div class="timeline-panel">
                   <div class="timeline-heading">
-                    <h4 class="timeline-title">Izvod iz maticne knjige rodjenih</h4>
-                    <p><small class="text-muted"><i class="fa fa-clock-o"></i> 01.10.2018.</small></p>
+                    <h4 class="timeline-title">Систем је одобрио Ваш захтев</h4>
+                    <p>
+                      <small class="text-muted">
+                        <i class="fa fa-clock-o"></i> 01.10.2018.</small>
+                    </p>
                   </div>
                   <div class="timeline-body">
-                    <p>Ceka se da stigne izvod.</p>
+                    <p>Администрација Министарства Здравља одобрава Ваш захтев.</p>
                   </div>
                 </div>
               </li>
 
               <li class="timeline-item">
-                <div class="timeline-badge danger"><i class="fa fa-check-circle"></i></div>
+                <div class="timeline-badge danger">
+                  <i class="fa fa-check-circle"></i>
+                </div>
                 <div class="timeline-panel">
                   <div class="timeline-heading">
-                    <h4 class="timeline-title">Registracija vozila</h4>
-                    <p><small class="text-muted"><i class="fa fa-clock-o"></i> 05.09.2018.</small></p>
+                    <h4 class="timeline-title">Здравствена књижица је котова.</h4>
+                    <p>
+                      <small class="text-muted">
+                        <i class="fa fa-clock-o"></i> 12.10.2018.</small>
+                    </p>
                   </div>
                   <div class="timeline-body">
-                    <p>Potrebno je registrovati vozilo.</p>
+                    <p>Ваша књижица је спремна.</p>
                   </div>
                 </div>
               </li>
@@ -79,15 +236,20 @@
       <div id="pasos" class="tab-pane fade">
 
         <div class="timeline-card" style="margin-top: 30px;">
-          <div style="display:inline-block;width:100%;overflow-x:hidden;">
+          <div style="display:inline-block;width:100%;overflow-y:auto;">
             <ul class="timeline timeline-horizontal">
 
               <li class="timeline-item">
-                <div class="timeline-badge success"><i class="fa fa-check-circle"></i></div>
+                <div class="timeline-badge success">
+                  <i class="fa fa-check-circle"></i>
+                </div>
                 <div class="timeline-panel">
                   <div class="timeline-heading">
                     <h4 class="timeline-title">Pasos</h4>
-                    <p><small class="text-muted"><i class="fa fa-clock-o"></i> 23.07.2018.</small></p>
+                    <p>
+                      <small class="text-muted">
+                        <i class="fa fa-clock-o"></i> 23.07.2018.</small>
+                    </p>
                   </div>
                   <div class="timeline-body">
                     <p>Poslata prijava za pasos.</p>
@@ -96,11 +258,16 @@
               </li>
 
               <li class="timeline-item">
-                <div class="timeline-badge success"><i class="fa fa-check-circle"></i></div>
+                <div class="timeline-badge success">
+                  <i class="fa fa-check-circle"></i>
+                </div>
                 <div class="timeline-panel">
                   <div class="timeline-heading">
                     <h4 class="timeline-title">Licna karta</h4>
-                    <p><small class="text-muted"><i class="fa fa-clock-o"></i> 25.07.2018.</small></p>
+                    <p>
+                      <small class="text-muted">
+                        <i class="fa fa-clock-o"></i> 25.07.2018.</small>
+                    </p>
                   </div>
                   <div class="timeline-body">
                     <p>Poslata prijava za licnu kartu.</p>
@@ -109,11 +276,16 @@
               </li>
 
               <li class="timeline-item">
-                <div class="timeline-badge warning"><i class="fa fa-check-circle"></i></div>
+                <div class="timeline-badge warning">
+                  <i class="fa fa-check-circle"></i>
+                </div>
                 <div class="timeline-panel">
                   <div class="timeline-heading">
                     <h4 class="timeline-title">Izvod iz maticne knjige rodjenih</h4>
-                    <p><small class="text-muted"><i class="fa fa-clock-o"></i> 01.10.2018.</small></p>
+                    <p>
+                      <small class="text-muted">
+                        <i class="fa fa-clock-o"></i> 01.10.2018.</small>
+                    </p>
                   </div>
                   <div class="timeline-body">
                     <p>Ceka se da stigne izvod.</p>
@@ -129,15 +301,20 @@
       <div id="overenja" class="tab-pane fade">
 
         <div class="timeline-card" style="margin-top: 30px;">
-          <div style="display:inline-block;width:100%;overflow-x:hidden;">
+          <div style="display:inline-block;width:100%;overflow-y:auto;">
             <ul class="timeline timeline-horizontal">
 
               <li class="timeline-item">
-                <div class="timeline-badge success"><i class="fa fa-check-circle"></i></div>
+                <div class="timeline-badge success">
+                  <i class="fa fa-check-circle"></i>
+                </div>
                 <div class="timeline-panel">
                   <div class="timeline-heading">
                     <h4 class="timeline-title">Overenje</h4>
-                    <p><small class="text-muted"><i class="fa fa-clock-o"></i> 23.07.2018.</small></p>
+                    <p>
+                      <small class="text-muted">
+                        <i class="fa fa-clock-o"></i> 23.07.2018.</small>
+                    </p>
                   </div>
                   <div class="timeline-body">
                     <p>Poslata prijava za dobijanje overenja.</p>
@@ -146,11 +323,16 @@
               </li>
 
               <li class="timeline-item">
-                <div class="timeline-badge warning"><i class="fa fa-check-circle"></i></div>
+                <div class="timeline-badge warning">
+                  <i class="fa fa-check-circle"></i>
+                </div>
                 <div class="timeline-panel">
                   <div class="timeline-heading">
                     <h4 class="timeline-title">Izvod iz maticne knjige rodjenih</h4>
-                    <p><small class="text-muted"><i class="fa fa-clock-o"></i> 01.10.2018.</small></p>
+                    <p>
+                      <small class="text-muted">
+                        <i class="fa fa-clock-o"></i> 01.10.2018.</small>
+                    </p>
                   </div>
                   <div class="timeline-body">
                     <p>Ceka se da stigne izvod.</p>

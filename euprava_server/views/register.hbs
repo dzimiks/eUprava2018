@@ -1,66 +1,122 @@
 <div class="container">
-  <div class="row">
-    <div class="login-wrapper">
-      <div class="card card-1">
-        <form class="form-horizontal" role="form">
-          <h2>Регистрација</h2>
-          <div class="form-group">
-            <label for="jmbg" class="col-sm-3 control-label">Име и презиме
-              <span style="color: #ff0000; font-weight: 300">*</span>
-            </label>
-            <div class="col-sm-9">
-              <input type="text" id="jmbg" placeholder="Унесите ваше име и презиме" class="form-control" autofocus> {{!--
+    <div class="row">
+        <div class="login-wrapper">
+            <div class="card card-1">
+                <form class="form-horizontal" role="form">
+                    <h2>Регистрација</h2>
+                    <div class="form-group">
+                        <label for="jmbg" class="col-sm-3 control-label">Име и презиме
+                            <span style="color: #ff0000; font-weight: 300">*</span>
+                        </label>
+                        <div class="col-sm-9">
+                            <input type="text" id="jmbg" placeholder="Унесите ваше име и презиме" class="form-control" autofocus> {{!--
                             <span class="help-block">Korisnicko ime sme da sadrzi samo slova i brojeve.</span> --}}
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="jmbg" class="col-sm-3 control-label">ЈМБГ
-              <span style="color: #ff0000; font-weight: 300">*</span>
-            </label>
-            <div class="col-sm-9">
-              <input type="text" id="jmbg" placeholder="Unesite Vaš jedinstveni matični broj" class="form-control" autofocus> {{!--
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="jmbg" class="col-sm-3 control-label">ЈМБГ
+                            <span style="color: #ff0000; font-weight: 300">*</span>
+                        </label>
+                        <div class="col-sm-9">
+                            <input type="text" id="jmbg" placeholder="Унесите ваш јединствени матични број" class="form-control" autofocus> {{!--
                             <span class="help-block">Korisnicko ime sme da sadrzi samo slova i brojeve.</span> --}}
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="email" class="col-sm-3 control-label">Е-пошта
-              <span style="color: #ff0000; font-weight: 300">*</span>
-            </label>
-            <div class="col-sm-9">
-              <input type="email" id="email" placeholder="Унесите вашу електронску форму" class="form-control"> {{!--
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="email" class="col-sm-3 control-label">Е-пошта
+                            <span style="color: #ff0000; font-weight: 300">*</span>
+                        </label>
+                        <div class="col-sm-9">
+                            <input type="email" id="email" placeholder="Унесите вашу електронску форму" class="form-control"> {{!--
                             <span class="help-block">Unesite validnu email. --}} {{!--
                                 <br> Svi email-ovi iz sistema, kao i obaveštenja i dokumenta biće poslati na ovaj email.</span>
                             --}}
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="password" class="col-sm-3 control-label">Шифра
-              <span style="color: #ff0000; font-weight: 300">*</span>
-            </label>
-            <div class="col-sm-9">
-              <input type="password" id="password" placeholder="Унесите вашу шифру" class="form-control"> {{!--
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="password" class="col-sm-3 control-label">Шифра
+                            <span style="color: #ff0000; font-weight: 300">*</span>
+                        </label>
+                        <div class="col-sm-9">
+                            <input type="password" id="password" placeholder="Унесите вашу шифру" class="form-control"> {{!--
                             <span class="help-block">Šifra mora da sadrži najmanje 8 karaktera.</span> --}}
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="password-repeat" class="col-sm-3 control-label">Поновите шифру
+                            <span style="color: #ff0000; font-weight: 300">*</span>
+                        </label>
+                        <div class="col-sm-9">
+                            <input type="password" id="-repeat" placeholder="Поновите шифру" class="form-control">
+                        </div>
+                    </div>
+
+                    {{!-- -Услови --}}
+                    <div class="form-check" style="text-align: center;margin: 20px 0;">
+                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                        <label class="form-check-label" style="display:inline" for="exampleCheck1">Прихватам
+                            <a data-toggle="modal" data-target="#exampleModalLong" class="terms">услове коришћења</a>
+                        </label>
+                    </div>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLongTitle">Услови коришћења портала еУправа</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    Услови коришћења Портала еУправа Правила коришћења Коришћењем Портала еУправа (у даљем тексту: Портал) прихватате ове услове
+                                    коришћења. Сагласни сте да ћете користити Портал само у законским оквирима. Портал се
+                                    не сме користи за слање и објављивање материјала који су агресивни, увредљиви, непристојни,
+                                    претећи или незаконити и који крше ауторска права, права на поверљивост, приватност и
+                                    друга права, као и за ширење ланчаних писама и нежељене поште. Не смете заобићи нити
+                                    покушати да заобиђете мере безбедности, укључујући ометање комуникације с Порталом на
+                                    било који начин, или покушати да измените садржај Портала осим ако то није изричито дозвољено.
+                                    Можете погледати, копирати или одштампати стране са Портала искључиво за личне, некомерцијалне
+                                    сврхе. Без изричите дозволе администратора, не можете користити, модификовати, копирати,
+                                    штампати, приказати, репродуковати, дистрибуирати или објављивати информације са Портала.
+                                    Банер ка Порталу као и лого Портала. можете укључити на своје Интернет сајтове Ограничење
+                                    одговорности Портал је јавни сервис. Све информације које се налазе на Порталу су информације
+                                    од јавног значаја, осим ако изричито није наведено другачије. Портал је динамичан и временом
+                                    ће се мењати без претходне најаве. Објављени садржаји се припремају на основу расположивих
+                                    информација од меродавних извора. Портал настоји да објављени садржај у највећој могућој
+                                    мери даје потпуну и тачну информацију. Без обзира на нашу пуну посвећеност припреми садржаја,
+                                    ми нисмо одговорни за било какву директну или индиректну штету или непријатности корисника,
+                                    која је настала као последица употребе било непотпуне или нетачне информације на овом
+                                    порталу. Корисници Портала су стога у потпуности одговорни за проверу тачности и потпуности
+                                    садржаја који се на њему налазе. Нисмо одговорни за директну или индиректну штету или
+                                    непријатности које могу настати због техничких проблема или недоступности Портала. Портал
+                                    садржи линкове ка Интернет сајтовима других органа јавне управе и других правних и физичких
+                                    лица. Портал не одговара за садржај на тим сајтовима као ни за њихову доступност.
+
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary btn-danger" data-dismiss="modal">Не прихватам</button>
+                                    <button type="button" class="btn btn-success"  data-dismiss="modal">Прихватам</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- /.form-group -->
+                    <div class="form-group text-center">
+                        {{!--
+                        <div class="col-sm-9 col-sm-offset-3"> --}}
+                            <button type="submit" class="btn btn-primary btn-lg">Направи налог</button>
+                            {{!-- </div> --}}
+                    </div>
+
+
+
+                </form>
+                <!-- /form -->
             </div>
-          </div>
-          <div class="form-group">
-            <label for="password-repeat" class="col-sm-3 control-label">Поновите шифру
-              <span style="color: #ff0000; font-weight: 300">*</span>
-            </label>
-            <div class="col-sm-9">
-              <input type="password" id="-repeat" placeholder="Поновите шифру" class="form-control">
-            </div>
-          </div>
-          <!-- /.form-group -->
-          <div class="form-group text-center">
-            {{!--
-            <div class="col-sm-9 col-sm-offset-3"> --}}
-            <button type="submit" class="btn btn-primary btn-lg">Направи налог</button>
-            {{!-- </div> --}}
-          </div>
-        </form>
-        <!-- /form -->
-      </div>
+        </div>
     </div>
-  </div>
 </div>
 <!-- ./container -->
