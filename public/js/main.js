@@ -17,11 +17,11 @@ $(document).ready(function () {
     content: function () {
       return '<div class="row row-eq-height">' +
           '<div class="col-xs-12 text-left">' +
-          '<h4 class="text-center">eUprava Asistent</h4><hr>' +
-          '<h5>Potrebna vam je pomoc? Kontaktirajte nasu podrsku!</h5>' +
-          '<h5>Email: <a href="mailto:euprava@gmail.com" style="color: blue; text-decoration: none;">euprava@gmail.com</a></h5>' +
+          '<h4 class="text-center">еУправа Асистент</h4><hr>' +
+          '<h5>Потребна вам је помоћ? Контактирајте нашу подршку!</h5>' +
+          '<h5>Емаил: <a href="mailto:euprava@gmail.com" style="color: blue; text-decoration: none;">euprava@gmail.com</a></h5>' +
           '<div class="text-center"><a href="tel:+12025550132">' +
-          '<button class="btn btn-warning btn-md">Pozivni broj</button>' +
+          '<button class="btn btn-warning btn-md">Позивни број</button>' +
           '</a></div></div>' +
           '</div>';
     }
