@@ -21,6 +21,19 @@ body {
 
 .btn-primary {
   background-color: #1A4073 !important;
+
+  a {
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+      color: white;
+    }
+  }
+}
+
+.btn-danger {
+  background-color: #b84242 !important;
 }
 
 .navbar-form {

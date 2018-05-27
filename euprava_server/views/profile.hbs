@@ -47,7 +47,12 @@
                                     </tr>
                                 </tbody>
                             </table>
-                                <a href="#" class="btn btn-secondary pull-right" style="background-color: #1A4073">Измени профил</a>
+                                <!--<a href="#" class="btn btn-secondary pull-right" style="background-color: #1A4073">Измени профил</a>-->
+                          <button class="btn btn-primary" style="float: right">
+                            <a href="" data-toggle="modal" data-target="#b1" style="text-decoration: none;">
+                              Измени профил
+                            </a>
+                          </button>
                         </div>
                     </div>
                 </div>
@@ -55,6 +60,52 @@
         </div>
     </div>
 </div>
+
+
+
+<!-- Modals -->
+<div class="modal fade" id="b1" role="dialog">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <!--<h3 class="modal-title">Подаци о налогу</h3>-->
+        <!--<hr>-->
+        <h3 class="text-center">Подаци о налогу</h3>
+        <hr>
+        <div class="col-md-12">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="form-group">
+                <label for="date">Е-пошта:</label>
+                <input type="text" class="form-control" id='profile-email' required />
+              </div>
+            </div>
+            <div class="col-md-12">
+              <div class="form-group">
+                <label for="consented">Шифра:</label>
+                <input type="password" class="form-control" id='profile-password' required />
+              </div>
+            </div>
+            <div class="col-md-12">
+              <div class="form-group">
+                <label for="entered">Понови шифру:</label>
+                <input type="password" class="form-control" id='profile-password-2' required />
+              </div>
+            </div>
+          </div>
+          <div class="alert alert-success text-center success-delivery" style="width: 65%; margin: 0 auto; display: none;">
+            <strong>Успешно сте потврдили доставу!</strong>Ускоро ће почети преузимање документа
+          </div>
+        </div>
+      </div>
+      <div class="modal-body" style="text-align: right">
+        <button type="submit" class="btn btn-success" id="btn-save">Сачувај</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 
 <script>
 
@@ -71,10 +122,18 @@
             $("#broj_telefona_paragraf").append(data.korisnik.brojTelefona);
             $("#datum_rodjenja_paragraf").append(data.korisnik.datumRodjenja);
 
-
-
+            $('#profile-email').val(data.korisnik.email);
+            $('#profile-password').val(data.korisnik.lozinka);
         } else {
-            console.log("neuspesno logovanje");
+            console.log("Neuspesno logovanje");
         }
+    });
+
+    $('#btn-save').click(function () {
+      $.post('/sacuvaj-korisnika', { jmbg: localStorage.getItem("jmbg"),
+                                     email: $('#profile-email').val(),
+                                     lozinka: $('#profile-password').val() }, function () {
+        window.location.replace('/profil');
+      });
     });
 </script>

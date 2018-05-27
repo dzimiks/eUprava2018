@@ -304,7 +304,7 @@ function NotificationFinal(title, msg) {
   buttonDiv.className = "notification-buttons";
 
   let buttonPostpone = document.createElement("button");
-  buttonPostpone.className = "btn btn-primary btn-margin";
+  buttonPostpone.className = "btn btn-danger btn-margin";
   buttonPostpone.type = "Button";
   buttonPostpone.innerHTML = "Одложи";
 

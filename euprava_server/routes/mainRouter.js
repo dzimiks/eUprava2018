@@ -21,6 +21,7 @@ router.post('/prijava', mainCtrlr.prijava);
 router.post('/korisnik', mainCtrlr.korisnik);
 router.post('/notifikacija', mainCtrlr.notifikacija);
 router.post('/verifikacija', mainCtrlr.verifikacija);
+router.post('/sacuvaj-korisnika', mainCtrlr.sacuvajKorisnika);
 
 
 module.exports = router;

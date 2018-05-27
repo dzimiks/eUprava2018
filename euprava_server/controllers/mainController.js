@@ -158,3 +158,10 @@ module.exports.sendEmail = function (email, subject, text) {
 module.exports.notifikacija = function (req, res, next) {
   module.exports.sendEmail(req.body.email, req.body.subject, req.body.text);
 };
+
+module.exports.sacuvajKorisnika = function (req, res, next) {
+  let updateValues = { email: req.body.email, lozinka: req.body.lozinka };
+  Korisnik.update(updateValues, { where: { jmbg: req.body.jmbg } }).then((result) => {
+    res.status(200).json({ 'message': 'Testing' });
+  });
+};
