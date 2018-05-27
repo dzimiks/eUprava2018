@@ -28,6 +28,10 @@ module.exports = function (sequelize, Sequelize) {
             type: Sequelize.STRING,
             notEmpty: true
         },
+        datumRodjenja:{
+            type: Sequelize.STRING,
+            notEmpty: true
+        },
         adresa:{
             type: Sequelize.STRING,
             notEmpty: true

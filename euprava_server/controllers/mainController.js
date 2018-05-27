@@ -89,3 +89,36 @@ module.exports.korisnik = function (req, res, next) {
     res.status(404).json({"message": "ne postoji korisnik"});
   });
 };
+
+var nodemailer = require('nodemailer');
+
+module.exports.sendEmail = function(email, subject, text) {
+    var transporter = nodemailer.createTransport({
+        service: 'gmail',
+        auth: {
+            user: 'cryptoleaguetest@gmail.com',
+            pass: 'cryptopassword'
+        }
+    });
+
+    var mailOptions = {
+        from: 'cryptoleaguetest@gmail.com',
+        to: email,
+        subject: subject,
+        text: text
+    };
+
+    transporter.sendMail(mailOptions, function (error, info) {
+        if (error) {
+            console.log(error);
+        } else {
+            console.log('Email sent: ' + info.response);
+        }
+    });
+};
+
+module.exports.notifikacija = function(req, res, next) {
+  module.exports.sendEmail(req.body.email, req.body.subject, req.body.text);
+  console.log("evo");
+  res.status(200);
+};

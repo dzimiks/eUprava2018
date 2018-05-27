@@ -18,6 +18,7 @@ router.get('/e-dostava', mainCtrlr.edelivery);
 
 router.post('/prijava', mainCtrlr.prijava);
 router.post('/korisnik', mainCtrlr.korisnik);
+router.post('/notifikacija', mainCtrlr.notifikacija);
 
 
 module.exports = router;
