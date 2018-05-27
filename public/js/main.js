@@ -28,7 +28,7 @@ $(document).ready(function () {
   });
   
   if (localStorage.getItem("jmbg")) {
-    $("#prijava-link").text("Odjava");
+    $("#prijava-link").text("Одјава");
   }
 
   // login
@@ -115,7 +115,7 @@ $(document).ready(function () {
 
     this.equals = function(text){
       for(let i = 0; i < this.tagovi.length; i++){
-        if(this.tagovi[i] === text){
+        if(this.tagovi[i].substr(0, text.length) === text){
           return true;
         }
       }
@@ -247,6 +247,11 @@ $(document).ready(function () {
       produzetakPasosa.style.display = "block";
     }else if(text == p1.naziv){
       izdavanjePasosa.style.display = "block";
+    }else if(p2.equals(text)){
+      izdavanjeLicne.style.display = "block";
+      produzetakLicne.style.display = "block";
+    }else if(p2.naziv === text){
+      izdavanjeLicne.style.display = "block";
     }else if(text === p3.naziv || p3.equals(text)) {
       izdavanjePasosa.style.display = "block";
       izdavanjeLicne.style.display = "block";
@@ -254,11 +259,6 @@ $(document).ready(function () {
     }else if(text === p4.naziv || p4.equals(text)){
       produzetakPasosa.style.display = "block";
       produzetakLicne.style.display = "block";
-    }else if(p2.equals(text)){
-      izdavanjeLicne.style.display = "block";
-      produzetakLicne.style.display = "block";
-    }else if(p2.naziv === text){
-      izdavanjeLicne.style.display = "block";
     }else{
       onaLinija.style.display = "none";
     }
