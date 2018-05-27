@@ -306,12 +306,12 @@ function NotificationFinal(title, msg) {
   let buttonPostpone = document.createElement("button");
   buttonPostpone.className = "btn btn-primary btn-margin";
   buttonPostpone.type = "Button";
-  buttonPostpone.innerHTML = "Odlozi";
+  buttonPostpone.innerHTML = "Одложи";
 
   let buttonAccept = document.createElement("button");
   buttonAccept.className = "btn btn-success btn-margin";
   buttonAccept.type = "Button";
-  buttonAccept.innerHTML = "Prihvati";
+  buttonAccept.innerHTML = "Настави";
 
 
   buttonDiv.appendChild(buttonAccept);
@@ -333,8 +333,8 @@ function NotificationFinal(title, msg) {
   setActive = function (active) { this.activeNotification = active };
 }
 
-var not1 = new NotificationFinal("ALOOOO", "Idemo nissss idemo nissss idemo idemo idemo idemo");
-var not2 = new NotificationFinal("Naslov", "Neka tamo poruka koja sluzi za obavestvannje biloc ega");
+var not1 = new NotificationFinal("Пасош ускоро истиче", "Ваша ли");
+var not2 = new NotificationFinal("Лична карта ускоро истиче", "Neka tamo poruka koja sluzi za obavestvannje biloc ega");
 // var not3 = new NotificationFinal("AAAAA", "BBBBBBBBBBBBBBBBBBB");
 
 
