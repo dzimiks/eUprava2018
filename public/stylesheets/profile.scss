@@ -42,7 +42,12 @@
 }
 
 #notification_panel_scroll {
-  //overflow: hidden;
+  height: 350px;
+  overflow-x: hidden;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 .notification_card{
@@ -131,8 +136,8 @@
 }
 .timeline .timeline-item .timeline-badge {
   color: #fff;
-  width: 54px;
-  height: 54px;
+  width: 45px;
+  height: 45px;
   line-height: 52px;
   font-size: 22px;
   text-align: center;
@@ -147,12 +152,16 @@
   border-top-left-radius: 50%;
   border-bottom-right-radius: 50%;
   border-bottom-left-radius: 50%;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
 .timeline .timeline-item .timeline-badge i,
 .timeline .timeline-item .timeline-badge .fa,
 .timeline .timeline-item .timeline-badge .glyphicon {
-  top: 13px;
-  left: 15px;
+  top: 8px;
+  left: 10px;
   position: absolute;
 }
 .timeline .timeline-item .timeline-badge.primary {
@@ -229,7 +238,7 @@
 .timeline-horizontal:before {
   height: 7px;
   top: auto;
-  bottom: 22px;
+  bottom: 19px;
   left: 56px;
   right: 0;
   width: 100%;
@@ -239,7 +248,7 @@
   display: table-cell;
   height: 210px;
   width: 20%;
-  min-width: 320px;
+  min-width: 270px;
   float: none !important;
   padding-left: 0px;
   padding-right: 20px;

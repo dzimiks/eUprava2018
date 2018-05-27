@@ -16,13 +16,152 @@
           </div>
         </form>
       </div>
-      <button class="btn btn-primary btn-lg">Претражи еУправу</button>
+      <button id="btn_pretrazi" class="btn btn-primary btn-lg">Претражи еУправу</button>
     </div>
   </div>
 
   <hr>
 
-  <div class="panel panel-default">
+  <!--<div class="panel panel-default">-->
+    <!--<div class="panel-heading">-->
+      <!--<h4 class="panel-title"> <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">-->
+        <!--<span class="glyphicon glyphicon-th-list" style="margin-right: 5px;"> </span>Захтев за издавање пасоша</a>-->
+      <!--</h4>-->
+    <!--</div>-->
+    <!--<div id="collapseThree" class="panel-collapse collapse">-->
+      <!--<div class="panel-body">-->
+        <!--<div class="row">-->
+          <!--<div class="col-md-6">-->
+            <!--&lt;!&ndash;<div class="form-group">&ndash;&gt;-->
+              <!--&lt;!&ndash;<label for="grantor">Grades</label>&ndash;&gt;-->
+              <!--&lt;!&ndash;<select class="form-control" id="grantor">&ndash;&gt;-->
+                <!--&lt;!&ndash;<option></option>&ndash;&gt;-->
+                <!--&lt;!&ndash;<option>Additional NIDCR Oversight</option>&ndash;&gt;-->
+                <!--&lt;!&ndash;<option>PI/PO Oversight</option>&ndash;&gt;-->
+              <!--&lt;!&ndash;</select>&ndash;&gt;-->
+            <!--&lt;!&ndash;</div>&ndash;&gt;-->
+          <!--</div>-->
+        <!--</div>-->
+        <!--&lt;!&ndash;<div class="well well-sm well-primary">&ndash;&gt;-->
+          <!--&lt;!&ndash;<div class="row">&ndash;&gt;-->
+            <!--&lt;!&ndash;<div class="col-xs-3">Study Oversight Reasons:</div>&ndash;&gt;-->
+            <!--&lt;!&ndash;<div class="col-xs-3">--</div>&ndash;&gt;-->
+            <!--&lt;!&ndash;<div class="col-xs-3">GMethod of Additional Oversight:</div>&ndash;&gt;-->
+            <!--&lt;!&ndash;<div class="col-xs-3">--</div>&ndash;&gt;-->
+          <!--&lt;!&ndash;</div>&ndash;&gt;-->
+          <!--&lt;!&ndash;<div class="row">&ndash;&gt;-->
+            <!--&lt;!&ndash;<div class="col-xs-3">GMethod of Additional Oversight - Other, Specify:</div>&ndash;&gt;-->
+            <!--&lt;!&ndash;<div class="col-xs-3">--</div>&ndash;&gt;-->
+            <!--&lt;!&ndash;<div class="col-xs-3">PO Study-level Comments::</div>&ndash;&gt;-->
+            <!--&lt;!&ndash;<div class="col-xs-3">--</div>&ndash;&gt;-->
+          <!--&lt;!&ndash;</div>&ndash;&gt;-->
+        <!--&lt;!&ndash;</div>&ndash;&gt;-->
+        <!--<div class="row">-->
+          <!--<div class="col-md-6">-->
+            <!--<div class="form-group">-->
+              <!--<label for="monitor">Јединствени матични број грађана:</label>-->
+              <!--<input type="text" class="form-control" id='monitor' />-->
+            <!--</div>-->
+          <!--</div>-->
+          <!--<div class="col-md-6">-->
+            <!--<div class="form-group">-->
+              <!--<label for="date">Датум рођења:</label>-->
+              <!--<input type="text" class="form-control" id='date' />-->
+            <!--</div>-->
+          <!--</div>-->
+          <!--<div class="col-md-6">-->
+            <!--<div class="form-group">-->
+              <!--<label for="consented">Име и презиме:</label>-->
+              <!--<input type="text" class="form-control" id='consented' />-->
+            <!--</div>-->
+          <!--</div>-->
+          <!--<div class="col-md-6">-->
+            <!--<div class="form-group">-->
+              <!--<label for="entered">Место, општина рођења:</label>-->
+              <!--<input type="text" class="form-control" id='entered' />-->
+            <!--</div>-->
+          <!--</div>-->
+
+          <!--<div class="col-md-6">-->
+            <!--<div class="form-group">-->
+              <!--<label for="completed">Девојачко име:</label>-->
+              <!--<input type="text" class="form-control" id='completed' />-->
+            <!--</div>-->
+          <!--</div>-->
+
+          <!--<div class="col-md-6">-->
+            <!--<div class="form-group">-->
+              <!--<label for="completed">Држављанство:</label>-->
+              <!--<input type="text" class="form-control" id='completed' />-->
+            <!--</div>-->
+          <!--</div>-->
+
+
+          <!--<div class="col-md-6">-->
+            <!--<div class="form-group">-->
+              <!--<label for="discontinued">Име родитеља:</label>-->
+              <!--<input type="text" class="form-control" id='discontinued' />-->
+            <!--</div>-->
+          <!--</div>-->
+          <!--<div class="col-md-6">-->
+            <!--<div class="form-group">-->
+              <!--<label for="status">Пол:</label>-->
+              <!--<select class="form-control" id="status">-->
+                <!--<option>Мушки</option>-->
+                <!--<option>Женски</option>-->
+                <!--<option>Не желим да се изјасним</option>-->
+              <!--</select>-->
+            <!--</div>-->
+          <!--</div>-->
+
+
+
+          <!--<div class="col-md-6">-->
+            <!--<div class="form-group">-->
+              <!--<label for="sites3">Занимање:</label>-->
+              <!--<input type="text" class="form-control" id='sites3' />-->
+            <!--</div>-->
+          <!--</div>-->
+          <!--<div class="col-md-6">-->
+            <!--<div class="form-group">-->
+              <!--<label for="enrollment">Адреса пребивалишта:</label>-->
+              <!--<input type="text" class="form-control" id='enrollment' />-->
+            <!--</div>-->
+          <!--</div>-->
+          <!--<div class="col-md-6">-->
+            <!--<div class="form-group">-->
+              <!--<label for="Duration2">Држава у коју путујете:</label>-->
+              <!--<input type="text" class="form-control" id='Duration2' />-->
+            <!--</div>-->
+          <!--</div>-->
+          <!--<div class="col-md-6">-->
+            <!--<div class="form-group">-->
+              <!--<label class="control-label" for="risk">Служење војног рока</label>-->
+              <!--<div class="controls" style="margin-left: 20px;">-->
+                <!--<label class="radio" for="risk-0">-->
+                  <!--<input type="radio" name="risk" id="risk-0" value="True" checked="checked">-->
+                  <!--Јесам-->
+                <!--</label>-->
+                <!--<label class="radio" for="risk-1">-->
+                  <!--<input type="radio" name="risk" id="risk-1" value="False">-->
+                  <!--Нисам-->
+                <!--</label>-->
+              <!--</div>-->
+            <!--</div>-->
+          <!--</div>-->
+          <!--<div class="col-md-6">-->
+            <!--<div class="form-group">-->
+              <!--<label for="enrollment">Дужина боравка:</label>-->
+              <!--<input type="text" class="form-control" id='enrollment' />-->
+            <!--</div>-->
+          <!--</div>-->
+
+        <!--</div>-->
+      <!--</div>-->
+    <!--</div>-->
+  <!--</div>-->
+
+  <div style="display: none" class="panel panel-default" id="izdavanje_pasosa">
     <div class="panel-heading">
       <h4 class="panel-title"> <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
         <span class="glyphicon glyphicon-th-list" style="margin-right: 5px;"> </span>Захтев за издавање пасоша</a>
@@ -32,30 +171,8 @@
       <div class="panel-body">
         <div class="row">
           <div class="col-md-6">
-            <!--<div class="form-group">-->
-              <!--<label for="grantor">Grades</label>-->
-              <!--<select class="form-control" id="grantor">-->
-                <!--<option></option>-->
-                <!--<option>Additional NIDCR Oversight</option>-->
-                <!--<option>PI/PO Oversight</option>-->
-              <!--</select>-->
-            <!--</div>-->
           </div>
         </div>
-        <!--<div class="well well-sm well-primary">-->
-          <!--<div class="row">-->
-            <!--<div class="col-xs-3">Study Oversight Reasons:</div>-->
-            <!--<div class="col-xs-3">--</div>-->
-            <!--<div class="col-xs-3">GMethod of Additional Oversight:</div>-->
-            <!--<div class="col-xs-3">--</div>-->
-          <!--</div>-->
-          <!--<div class="row">-->
-            <!--<div class="col-xs-3">GMethod of Additional Oversight - Other, Specify:</div>-->
-            <!--<div class="col-xs-3">--</div>-->
-            <!--<div class="col-xs-3">PO Study-level Comments::</div>-->
-            <!--<div class="col-xs-3">--</div>-->
-          <!--</div>-->
-        <!--</div>-->
         <div class="row">
           <div class="col-md-6">
             <div class="form-group">
@@ -160,7 +277,470 @@
       </div>
     </div>
   </div>
+  <div style="display: none" class="panel panel-default" id="izdvanje_licne">
+    <div class="panel-heading">
+      <h4 class="panel-title"> <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+        <span class="glyphicon glyphicon-th-list" style="margin-right: 5px;"> </span>Захтев за издавање личне карте</a>
+      </h4>
+    </div>
+    <div id="collapseThree" class="panel-collapse collapse">
+      <div class="panel-body">
+        <div class="row">
+          <div class="col-md-6">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="monitor">Јединствени матични број грађана:</label>
+              <input type="text" class="form-control" id='monitor' />
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="date">Датум рођења:</label>
+              <input type="text" class="form-control" id='date' />
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="consented">Име и презиме:</label>
+              <input type="text" class="form-control" id='consented' />
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="entered">Место, општина рођења:</label>
+              <input type="text" class="form-control" id='entered' />
+            </div>
+          </div>
 
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="completed">Девојачко име:</label>
+              <input type="text" class="form-control" id='completed' />
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="completed">Држављанство:</label>
+              <input type="text" class="form-control" id='completed' />
+            </div>
+          </div>
+
+
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="discontinued">Име родитеља:</label>
+              <input type="text" class="form-control" id='discontinued' />
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="status">Пол:</label>
+              <select class="form-control" id="status">
+                <option>Мушки</option>
+                <option>Женски</option>
+                <option>Не желим да се изјасним</option>
+              </select>
+            </div>
+          </div>
+
+
+
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="sites3">Занимање:</label>
+              <input type="text" class="form-control" id='sites3' />
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="enrollment">Адреса пребивалишта:</label>
+              <input type="text" class="form-control" id='enrollment' />
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="Duration2">Држава у коју путујете:</label>
+              <input type="text" class="form-control" id='Duration2' />
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <label class="control-label" for="risk">Служење војног рока</label>
+              <div class="controls" style="margin-left: 20px;">
+                <label class="radio" for="risk-0">
+                  <input type="radio" name="risk" id="risk-0" value="True" checked="checked">
+                  Јесам
+                </label>
+                <label class="radio" for="risk-1">
+                  <input type="radio" name="risk" id="risk-1" value="False">
+                  Нисам
+                </label>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="enrollment">Дужина боравка:</label>
+              <input type="text" class="form-control" id='enrollment' />
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <div style="display: none" class="panel panel-default" id="izdavanje_zdravstvene">
+    <div class="panel-heading">
+      <h4 class="panel-title"> <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+        <span class="glyphicon glyphicon-th-list" style="margin-right: 5px;"> </span>Захтев за издавање здравствене</a>
+      </h4>
+    </div>
+    <div id="collapseThree" class="panel-collapse collapse">
+      <div class="panel-body">
+        <div class="row">
+          <div class="col-md-6">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="monitor">Јединствени матични број грађана:</label>
+              <input type="text" class="form-control" id='monitor' />
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="date">Датум рођења:</label>
+              <input type="text" class="form-control" id='date' />
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="consented">Име и презиме:</label>
+              <input type="text" class="form-control" id='consented' />
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="entered">Место, општина рођења:</label>
+              <input type="text" class="form-control" id='entered' />
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="completed">Девојачко име:</label>
+              <input type="text" class="form-control" id='completed' />
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="completed">Држављанство:</label>
+              <input type="text" class="form-control" id='completed' />
+            </div>
+          </div>
+
+
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="discontinued">Име родитеља:</label>
+              <input type="text" class="form-control" id='discontinued' />
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="status">Пол:</label>
+              <select class="form-control" id="status">
+                <option>Мушки</option>
+                <option>Женски</option>
+                <option>Не желим да се изјасним</option>
+              </select>
+            </div>
+          </div>
+
+
+
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="sites3">Занимање:</label>
+              <input type="text" class="form-control" id='sites3' />
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="enrollment">Адреса пребивалишта:</label>
+              <input type="text" class="form-control" id='enrollment' />
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="Duration2">Држава у коју путујете:</label>
+              <input type="text" class="form-control" id='Duration2' />
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <label class="control-label" for="risk">Служење војног рока</label>
+              <div class="controls" style="margin-left: 20px;">
+                <label class="radio" for="risk-0">
+                  <input type="radio" name="risk" id="risk-0" value="True" checked="checked">
+                  Јесам
+                </label>
+                <label class="radio" for="risk-1">
+                  <input type="radio" name="risk" id="risk-1" value="False">
+                  Нисам
+                </label>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="enrollment">Дужина боравка:</label>
+              <input type="text" class="form-control" id='enrollment' />
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <div style="display: none" class="panel panel-default" id="produzetak_pasosa">
+    <div class="panel-heading">
+      <h4 class="panel-title"> <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+        <span class="glyphicon glyphicon-th-list" style="margin-right: 5px;"> </span>Захтев за продужење пасоша</a>
+      </h4>
+    </div>
+    <div id="collapseThree" class="panel-collapse collapse">
+      <div class="panel-body">
+        <div class="row">
+          <div class="col-md-6">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="monitor">Јединствени матични број грађана:</label>
+              <input type="text" class="form-control" id='monitor' />
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="date">Датум рођења:</label>
+              <input type="text" class="form-control" id='date' />
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="consented">Име и презиме:</label>
+              <input type="text" class="form-control" id='consented' />
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="entered">Место, општина рођења:</label>
+              <input type="text" class="form-control" id='entered' />
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="completed">Девојачко име:</label>
+              <input type="text" class="form-control" id='completed' />
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="completed">Држављанство:</label>
+              <input type="text" class="form-control" id='completed' />
+            </div>
+          </div>
+
+
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="discontinued">Име родитеља:</label>
+              <input type="text" class="form-control" id='discontinued' />
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="status">Пол:</label>
+              <select class="form-control" id="status">
+                <option>Мушки</option>
+                <option>Женски</option>
+                <option>Не желим да се изјасним</option>
+              </select>
+            </div>
+          </div>
+
+
+
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="sites3">Занимање:</label>
+              <input type="text" class="form-control" id='sites3' />
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="enrollment">Адреса пребивалишта:</label>
+              <input type="text" class="form-control" id='enrollment' />
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="Duration2">Држава у коју путујете:</label>
+              <input type="text" class="form-control" id='Duration2' />
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <label class="control-label" for="risk">Служење војног рока</label>
+              <div class="controls" style="margin-left: 20px;">
+                <label class="radio" for="risk-0">
+                  <input type="radio" name="risk" id="risk-0" value="True" checked="checked">
+                  Јесам
+                </label>
+                <label class="radio" for="risk-1">
+                  <input type="radio" name="risk" id="risk-1" value="False">
+                  Нисам
+                </label>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="enrollment">Дужина боравка:</label>
+              <input type="text" class="form-control" id='enrollment' />
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <div style="display: none" class="panel panel-default" id="produzetak_licne">
+    <div class="panel-heading">
+      <h4 class="panel-title"> <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+        <span class="glyphicon glyphicon-th-list" style="margin-right: 5px;"> </span>Захтев за продужење личне карте</a>
+      </h4>
+    </div>
+    <div id="collapseThree" class="panel-collapse collapse">
+      <div class="panel-body">
+        <div class="row">
+          <div class="col-md-6">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="monitor">Јединствени матични број грађана:</label>
+              <input type="text" class="form-control" id='monitor' />
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="date">Датум рођења:</label>
+              <input type="text" class="form-control" id='date' />
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="consented">Име и презиме:</label>
+              <input type="text" class="form-control" id='consented' />
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="entered">Место, општина рођења:</label>
+              <input type="text" class="form-control" id='entered' />
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="completed">Девојачко име:</label>
+              <input type="text" class="form-control" id='completed' />
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="completed">Држављанство:</label>
+              <input type="text" class="form-control" id='completed' />
+            </div>
+          </div>
+
+
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="discontinued">Име родитеља:</label>
+              <input type="text" class="form-control" id='discontinued' />
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="status">Пол:</label>
+              <select class="form-control" id="status">
+                <option>Мушки</option>
+                <option>Женски</option>
+                <option>Не желим да се изјасним</option>
+              </select>
+            </div>
+          </div>
+
+
+
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="sites3">Занимање:</label>
+              <input type="text" class="form-control" id='sites3' />
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="enrollment">Адреса пребивалишта:</label>
+              <input type="text" class="form-control" id='enrollment' />
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="Duration2">Држава у коју путујете:</label>
+              <input type="text" class="form-control" id='Duration2' />
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <label class="control-label" for="risk">Служење војног рока</label>
+              <div class="controls" style="margin-left: 20px;">
+                <label class="radio" for="risk-0">
+                  <input type="radio" name="risk" id="risk-0" value="True" checked="checked">
+                  Јесам
+                </label>
+                <label class="radio" for="risk-1">
+                  <input type="radio" name="risk" id="risk-1" value="False">
+                  Нисам
+                </label>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="enrollment">Дужина боравка:</label>
+              <input type="text" class="form-control" id='enrollment' />
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
 
   <hr>
 
