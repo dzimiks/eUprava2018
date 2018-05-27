@@ -10,6 +10,21 @@ $(document).ready(function () {
   //
   // $(window).resize();
 
+  // login
+  $(document).on('click', '#login', function(e) {
+    let email = $("#email").val();
+    let password = $("#password").val();
+    $.post( "/prijava", { email: email, password: password }, function( data ) {
+      if (data.jmbg) {
+        console.log("Uspesne i jmbg=" + data.jmbg);
+        localStorage.setItem("jmbg", data.jmbg);
+        window.location.replace("/profil");
+      } else {
+        console.log("neuspesno logovanje");
+      }
+    });
+  });
+
   // Dropdown event
   $(".timeline-card .dropdown-menu li a").click(function(){
     $(".btn:first-child").text($(this).text());

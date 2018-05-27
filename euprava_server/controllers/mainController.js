@@ -1,3 +1,5 @@
+var Korisnik = require("../models").korisnik;
+
 module.exports.home = function (req, res, next) {
   res.render('home', {
     meta: {
@@ -54,5 +56,36 @@ module.exports.edelivery = function (req, res, next) {
       description: 'eUprava E Dostava Page',
       edostava: 'e-dostava'
     }
+  });
+};
+
+module.exports.prijava = function (req, res, next) {
+  let email = req.body.email;
+  let password = req.body.password;
+  Korisnik.findOne({ where: { email: email } }).then(function (user) {
+    if (user) {
+      if (password === user.lozinka) {
+        res.status(200).json({"jmbg": user.jmbg});
+      } else {
+        res.status(401).json({"message": "netacna sifra"});
+      }
+    } else {
+      res.status(404).json({"message": "ne postoji korisnik"});
+    }
+  }).catch(function(err){
+    res.status(404).json({"message": "ne postoji korisnik"});
+  });
+};
+
+module.exports.korisnik = function (req, res, next) {
+  let jmbg = req.body.jmbg;
+  Korisnik.findOne({ where: { jmbg: jmbg } }).then(function (user) {
+    if (user) {
+      res.status(200).json({"korisnik": user});
+    } else {
+      res.status(404).json({"message": "ne postoji korisnik"});
+    }
+  }).catch(function(err){
+    res.status(404).json({"message": "ne postoji korisnik"});
   });
 };

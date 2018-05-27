@@ -1,0 +1,25 @@
+{
+    "development": {
+        "username": "root",
+        "password": "pass123",
+        "database": "eupravatest",
+        "host": "127.0.0.1",
+        "port": 3306,
+        "dialect": "mysql",
+        "operatorsAliases": false
+    },
+    "test": {
+        "username": "",
+        "password": null,
+        "database": "",
+        "host": "",
+        "dialect": "mysql"
+    },
+    "production": {
+        "username": "",
+        "password": null,
+        "database": "",
+        "host": "127.0.0.1",
+        "dialect": "mysql"
+    }
+}

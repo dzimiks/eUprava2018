@@ -1,30 +1,76 @@
+
 <div class="container">
     <div class="row">
-        <div class="col-md-12">
-            <div class="row">
-                <div class="col-md-4" style="display: inline-block;">
-                    <img style="border-radius: 50%;" alt="User Pic" src="https://x1.xingassets.com/assets/frontend_minified/img/users/nobody_m.original.jpg" id="profile-image" class="profile_picture img-responsive">
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xs-offset-0 col-sm-offset-0 col-md-offset-3 col-lg-offset-3 toppad">
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <h3 id="ime_prezime" class="panel-title">Mihailo Vignjevic</h3>
                 </div>
-                <div class="col-md-8"style="display: inline-block">
-                    <div>
-                        <h2 id="ime_prezime"> Mihailo Vignjevic </h2>
-                        <p id="zanimanje_paragraf">Student demonstrator</p>
-                    </div>
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-md-3 col-lg-3 " align="center">
+                            <img style="border-radius: 50%;" alt="User Pic" src="https://x1.xingassets.com/assets/frontend_minified/img/users/nobody_m.original.jpg"
+                                id="profile-image" class="profile_picture img-responsive">
+                        </div>
+                        <div class=" col-md-9 col-lg-9">
+                            <table class="table table-user-information">
+                                <tbody>
+                                    <tr>
+                                        <td>Zanimanje: </td>
+                                        <td id = "zanimanje_paragaraf">Programirnaje</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Datum rodjenja: </td>
+                                        <td id = "datum_rodjenja_paragraf"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Pol</td>
+                                        <td id = "pol_paragraf"></td>
+                                    </tr>
 
-                    <hr>
-                    <ul>
-                        <p id="datum_rodjenja_paragraf">Datum rodjenja: 16. 12. 1997</p>
-                        <p id="email_paragraf">Email: mvignjevic97@gmail.com</p>
-                        <p id="broj_telefona_paragraf">Broj telefona: +381 64 4098907</p>
-                    </ul>
-                    <hr>
-                    <ul>
-                        <p id="jmbg_paragraf">Jmbg: 0123456789123</p>
-                        <p id="adresa_paragraf">Adresa: Cvetna 18</p>
-                    </ul>
+                                    <tr>
+                                        <tr>
+                                            <td>Email: </td>
+                                            <td id = "email_paragraf"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Broj telefona: </td>
+                                            <td id = "broj_telefona_paragraf"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>JMBG: </td>
+                                            <td id = "jmbg_paragraf"></td>
+                                        </tr>
+                                        <td>Adresa: </td>
+                                        <td id= "adresa_paragraf">
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                                <a href="#" class="btn btn-secondary pull-right" style="background-color: #1A4073">Izmena profila</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-
 </div>
+
+<script>
+
+    $.post("/korisnik", { jmbg: localStorage.getItem("jmbg") }, function (data) {
+        if (data.korisnik) {
+            console.log("bilo sta" + data.korisnik);
+            $("#jmbg_paragraf").append(data.korisnik.jmbg);
+            $("#ime_prezime").html(data.korisnik.ime);
+            $("#ime_prezime").append(" " + data.korisnik.prezime);
+            $("#email_paragraf").append(data.korisnik.email);
+            $("#broj_telefona_paragraf").append(data.korisnik.brojTelefona);
+
+
+
+        } else {
+            console.log("neuspesno logovanje");
+        }
+    });
+</script>

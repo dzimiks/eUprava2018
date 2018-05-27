@@ -16,4 +16,8 @@ router.get('/prijava', mainCtrlr.login);
 router.get('/registracija', mainCtrlr.register);
 router.get('/e-dostava', mainCtrlr.edelivery);
 
+router.post('/prijava', mainCtrlr.prijava);
+router.post('/korisnik', mainCtrlr.korisnik);
+
+
 module.exports = router;

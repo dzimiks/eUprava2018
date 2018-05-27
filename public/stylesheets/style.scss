@@ -154,3 +154,13 @@ input[type=checkbox], input[type=radio] {
     text-decoration: none;
   }
 }
+
+.panel {
+  margin: 50px auto !important;
+}
+
+.panel-info>.panel-heading {
+  color: white;
+  background-color: #1A4073;
+  border-color: #1A4073;
+}

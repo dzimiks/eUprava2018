@@ -3,10 +3,18 @@ var path = require('path');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+const models = require("./euprava_server/models");
 
 var mainRouter = require('./euprava_server/routes/mainRouter');
 
 var app = express();
+
+//Sync Database
+models.sequelize.sync().then(function () {
+  console.log('Nice! Database looks fine')
+}).catch(function (err) {
+  console.log(err, "Something went wrong with the Database Update!")
+});
 
 // View engine setup
 app.set('views', path.join(__dirname, 'euprava_server', 'views'));
