@@ -18,7 +18,9 @@
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h3 class="modal-title" id="exampleModalLabel"><b>еФормулар</b></h3>
+            <h3 class="modal-title" id="exampleModalLabel">
+              <b>еФормулар</b>
+            </h3>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
@@ -66,7 +68,7 @@
 
                     <div class="col-md-6">
                       <div class="form-group">
-                        <label for="completed">Девојачко име:</label>
+                        <label for="completed">Девојачко презиме:</label>
                         <input type="text" class="form-control" id='completed' />
                       </div>
                     </div>
@@ -344,3 +346,29 @@
     </div>
   </div>
 </div>
+
+<script>
+  $.post("/korisnik", { jmbg: localStorage.getItem("jmbg") }, function (data) {
+    if (data.korisnik) {
+      console.log("bilo sta" + data.korisnik);
+      $("#monitor").val(data.korisnik.jmbg);
+      $("#date").val(data.korisnik.datumRodjenja);
+      $("#consented").val(data.korisnik.ime + " " + data.korisnik.prezime);
+      $("#sites3").val(data.korisnik.zanimanje);
+      $("#enrollment").val(data.korisnik.adresa);
+    } else {
+      console.log("neuspesno logovanje");
+    }
+  });
+
+
+  $('#btn-save').click(function () {
+    $.post('/sacuvaj-korisnika', {
+      jmbg: localStorage.getItem("jmbg"),
+      email: $('#profile-email').val(),
+      lozinka: $('#profile-password').val()
+    }, function () {
+      window.location.replace('/profil');
+    });
+  });
+</script>
