@@ -111,7 +111,7 @@ $(document).ready(function () {
       for(let i = 0; i < this.tagovi.length; i++){
         alert(this.tagovi[i]);
       }
-    }
+    };
 
     this.equals = function(text){
       for(let i = 0; i < this.tagovi.length; i++){
@@ -122,39 +122,100 @@ $(document).ready(function () {
     }
   }
 
-  var p1 = new Pretraga("Izrada pasosa");
-  var p2 = new Pretraga("Izrada licne karte");
-  var p3 = new Pretraga("Izdavanje");
-  var p4 = new Pretraga("")
+  var p1 = new Pretraga("Израда пасоша");
+  var p2 = new Pretraga("Израда личнe карте");
+  var p3 = new Pretraga("Издавање докумената");
+  var p4 = new Pretraga("Продужетак докумената");
 
+  //P1
   p1.dodajTag("pasos");
   p1.dodajTag("pasoš");
   p1.dodajTag("пасош");
   p1.dodajTag("putna isprava");
   p1.dodajTag("путна исправа");
+  p1.dodajTag("izdavanje pasosa");
+  p1.dodajTag("izdavanje pasoša");
+  p1.dodajTag("издавање пасоша");
+  p1.dodajTag("izrada pasosa");
+  p1.dodajTag("izrada pasoša");
+  p1.dodajTag("израда пасоша");
+  p1.dodajTag("produženje pasoša");
+  p1.dodajTag("produzenje pasoša");
 
+
+  //P2
   p2.dodajTag("licna karta");
   p2.dodajTag("lična karta");
-  p2.dodajTag("licna");
-  p2.dodajTag("lična");
-  p2.dodajTag("karta");
   p2.dodajTag("лична карта");
+  p2.dodajTag("karta");
   p2.dodajTag("карта");
-  p2.dodajTag("лична");
+  p2.dodajTag("издавање личне карте");
+  p2.dodajTag("издавање личнa картa");
+  p2.dodajTag("izdavanje licne karte");
+  p2.dodajTag("izdavanje lična karte");
+  p2.dodajTag("produzenje licna karta");
+  p2.dodajTag("produženje lična karta");
+  p2.dodajTag("продужење личне карте");
+  p2.dodajTag("продужење личнa картa");
+  p2.dodajTag("izrada licne karte");
+  p2.dodajTag("izrada licna karta");
+  p2.dodajTag("izrada lična karte");
+  p2.dodajTag("izrada lična karta");
+  p2.dodajTag("израда личне карте");
+  p2.dodajTag("израда личнa картa");
 
-  p3.dodajTag("izdavanje");
+  //P3
   p3.dodajTag("izdavanje pasosa");
   p3.dodajTag("izdavanje pasoša");
+  p3.dodajTag("издавање пасоша");
   p3.dodajTag("izdavanje licne karte");
   p3.dodajTag("izdavanje lična karte");
   p3.dodajTag("izdavanje licna karta");
   p3.dodajTag("izdavanje lična karta");
-  p3.dodajTag("издавање");
-  p3.dodajTag("издавање пасоша");
-  p3.dodajTag("издавање лицне карте");
-  p3.dodajTag("издавање лицнa картa");
+  p3.dodajTag("издавање личне карте");
+  p3.dodajTag("издавање личнa картa");
+  p3.dodajTag("pasos");
+  p3.dodajTag("pasoš");
+  p3.dodajTag("пасош");
+  p3.dodajTag("putna isprava");
+  p3.dodajTag("путна исправа");
+  p3.dodajTag("licna karta");
+  p3.dodajTag("lična karta");
+  p3.dodajTag("лична карта");
+  p3.dodajTag("karta");
+  p3.dodajTag("карта");
+  p3.dodajTag("izrada licne karte");
+  p3.dodajTag("izrada licna karta");
+  p3.dodajTag("izrada lična karte");
+  p3.dodajTag("izrada lična karta");
+  p3.dodajTag("израда личне карте");
+  p3.dodajTag("израда личнa картa");
+  p3.dodajTag("izrada pasosa");
+  p3.dodajTag("izrada pasoša");
+  p3.dodajTag("израда пасоша");
 
-  var data = [p2, p1, p3];
+  //P4
+  p4.dodajTag("produzenje pasosa");
+  p4.dodajTag("produženje pasoša");
+  p4.dodajTag("produzenje licne karte");
+  p4.dodajTag("produženje lična karte");
+  p4.dodajTag("produzenje licna karta");
+  p4.dodajTag("produženje lična karta");
+  p4.dodajTag("продужење пасоша");
+  p4.dodajTag("продужење личне карте");
+  p4.dodajTag("продужење личнa картa");
+  p4.dodajTag("pasos");
+  p4.dodajTag("pasoš");
+  p4.dodajTag("пасош");
+  p4.dodajTag("putna isprava");
+  p4.dodajTag("путна исправа");
+  p4.dodajTag("licna karta");
+  p4.dodajTag("lična karta");
+  p4.dodajTag("лична карта");
+  p4.dodajTag("karta");
+  p4.dodajTag("карта");
+
+  var data = [p2, p1, p3, p4];
 
   ///Button pretrazi akcija
 
@@ -170,12 +231,15 @@ $(document).ready(function () {
     let izdavanjeZdravstvene = document.getElementById("izdavanje_zdravstvene");
     let produzetakPasosa = document.getElementById("produzetak_pasosa");
     let produzetakLicne = document.getElementById("produzetak_licne");
+    let onaLinija = document.getElementById("ona_linija");
 
     izdavanjePasosa.style.display = "none";
     izdavanjeLicne.style.display = "none";
     izdavanjeZdravstvene.style.display = "none";
     produzetakPasosa.style.display = "none";
     produzetakLicne.style.display = "none";
+    onaLinija.style.display = "block";
+
 
 
     if(p1.equals(text)){
@@ -183,11 +247,11 @@ $(document).ready(function () {
       produzetakPasosa.style.display = "block";
     }else if(text == p1.naziv){
       izdavanjePasosa.style.display = "block";
-    }else if(text === "Izdavanje") {
+    }else if(text === p3.naziv || p3.equals(text)) {
       izdavanjePasosa.style.display = "block";
       izdavanjeLicne.style.display = "block";
       izdavanjeZdravstvene.style.display = "block";
-    }else if(text === "Produzetak"){
+    }else if(text === p4.naziv || p4.equals(text)){
       produzetakPasosa.style.display = "block";
       produzetakLicne.style.display = "block";
     }else if(p2.equals(text)){
@@ -195,6 +259,8 @@ $(document).ready(function () {
       produzetakLicne.style.display = "block";
     }else if(p2.naziv === text){
       izdavanjeLicne.style.display = "block";
+    }else{
+      onaLinija.style.display = "none";
     }
   });
 
@@ -395,7 +461,7 @@ function NotificationFinal(title, msg) {
   closeButton.className = "notificaiton_button close";
   closeButton.onclick = function () {
     mainDiv.style.display = 'none';
-  }
+  };
 
   let h3Title = document.createElement("h3");
   h3Title.innerHTML = title;
@@ -439,10 +505,19 @@ function NotificationFinal(title, msg) {
 
 var not1 = new NotificationFinal("Пасош ускоро истиче", "Молимо Вас да у што краћем року предате папирологију.");
 var not2 = new NotificationFinal("Лична карта ускоро истиче", "Молимо Вас да у што краћем року предате папирологију.");
-// var not3 = new NotificationFinal("AAAAA", "BBBBBBBBBBBBBBBBBBB");
 
 // setInterval(function() {
-  var not3 = new NotificationFinal("Регистрација возила ускоро истиче", "Молимо Вас да у што краћем року предате папирологију.");
-// }, 3000);
+//   var not3 = new NotificationFinal("Регистрација возила ускоро истиче", "Молимо Вас да у што краћем року предате папирологију.");
+// }, 2000);
 
+for (var i = 0; i < 3; i++) {
+  setTimeout(function(y) {
+    var not3 = new NotificationFinal("Регистрација возила ускоро истиче", "Молимо Вас да у што краћем року предате папирологију.");
+    setInterval(function () {
+      $(".alert").fadeTo(4000, 7000).slideUp(700, function(){
+        $(this).remove();
+      });
+    }, 1000);
+  }, 5000);
+}
 
