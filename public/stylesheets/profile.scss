@@ -24,8 +24,9 @@
 //Notification panel
 .notification_panel_title{
   font-size: x-large;
+  text-align: center;
   //margin-top: 20px;
-  margin-left: 15px;
+  //margin-left: 15px;
   //margin-bottom: 30px;
 }
 
@@ -41,7 +42,7 @@
 }
 
 #notification_panel_scroll {
-  overflow: hidden;
+  //overflow: hidden;
 }
 
 .notification_card{
@@ -76,6 +77,11 @@
   padding: 15px;
   position: relative;
   width: 100%;
+  margin: 10px 0;
+
+  h3 {
+    margin-top: 0;
+  }
 }
 
 .card-1 {
@@ -221,7 +227,7 @@
   display: inline-block;
 }
 .timeline-horizontal:before {
-  height: 10px;
+  height: 7px;
   top: auto;
   bottom: 22px;
   left: 56px;

@@ -1,14 +1,14 @@
 $(document).ready(function () {
 
-  // Sticky footer
-  $(window).resize(function () {
-    var footerHeight = $('.footer').outerHeight();
-    $('.push').height(footerHeight);
-
-    $('.wrapper').css({'marginBottom': '-' + footerHeight + 'px'});
-  });
-
-  $(window).resize();
+  // // Sticky footer
+  // $(window).resize(function () {
+  //   var footerHeight = $('.footer').outerHeight();
+  //   $('.push').height(footerHeight);
+  //
+  //   $('.wrapper').css({'marginBottom': '-' + footerHeight + 'px'});
+  // });
+  //
+  // $(window).resize();
 
   // Dropdown event
   $(".timeline-card .dropdown-menu li a").click(function(){
@@ -16,16 +16,18 @@ $(document).ready(function () {
     $(".btn:first-child").val($(this).text());
   });
 
-  $(document).on('click', '.nav-item', function(e) {
-    $(".navbar-nav li .active").removeClass("active");
-    $(e.target).addClass("active");
+  $('.dropdown').click(function () {
+    $('.badge-notify').hide();
   });
+
+  // $(document).on('click', '.nav-item', function(e) {
+  //   $(".navbar-nav li .active").removeClass("active");
+  //   $(e.target).addClass("active");
+  // });
 
   var url_string = window.location.href;
   var url = new URL(url_string);
   var c = url.searchParams.get("id");
-  console.log(c);
-
   $('#' + c).modal('show');
 
   // ======
@@ -265,6 +267,6 @@ function NotificationFinal(title, msg){
 
 var not1 = new NotificationFinal("ALOOOO", "Idemo nissss idemo nissss idemo idemo idemo idemo");
 var not2 = new NotificationFinal("Naslov", "Neka tamo poruka koja sluzi za obavestvannje biloc ega");
-var not3 = new NotificationFinal("AAAAA", "BBBBBBBBBBBBBBBBBBB");
+// var not3 = new NotificationFinal("AAAAA", "BBBBBBBBBBBBBBBBBBB");
 
 
